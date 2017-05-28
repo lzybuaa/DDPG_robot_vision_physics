@@ -1,2 +1,11 @@
-# DDPG_robot_vision_physics
-# This repository is to implement DDPG algorithm to let robot arm learn the physics via vision, and conduct simulation based on that.
+'''
+UCSD ECE285 Final Project - robot learn physics using DDPG
+Group member: Jingyi Yang, Siwei Guo, Max Jiao, Fuheng Deng
+'''
+
+BASIC SETUP REQUIREMENT:
+python 3.5.3
+tensorflow 1.1.0
+gym(openAIgym) 0.9.1
+numpy 1.12 or above
+
