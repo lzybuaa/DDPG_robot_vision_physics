@@ -1,5 +1,5 @@
-''' \n
-UCSD ECE285 Final Project - robot learn physics using DDPG \n
+''' \s\s
+UCSD ECE285 Final Project - robot learn physics using DDPG \s\s
 Group member: Jingyi Yang, Siwei Guo, Max Jiao, Fuheng Deng \n
 ''' \n
 
