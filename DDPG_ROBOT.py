@@ -4,8 +4,10 @@ DDPG is Actor Critic based algorithm.
 6 link robot example
 
 Using:
-tensorflow 1.0
-gym 0.8.0
+python 3.5.3
+tensorflow 1.1.0
+gym 0.9.1
+numpy 1.13
 """
 
 
