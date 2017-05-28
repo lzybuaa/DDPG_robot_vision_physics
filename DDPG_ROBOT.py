@@ -7,7 +7,7 @@ Using:
 python 3.5.3
 tensorflow 1.1.0
 gym 0.9.1
-numpy 1.13
+numpy 1.12
 """
 
 
@@ -16,4 +16,5 @@ os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 import tensorflow as tf
 import numpy as np
 import gym
+
 
