@@ -1,11 +1,11 @@
 '''
-UCSD ECE285 Final Project - robot learn physics using DDPG \s\s
-Group member: Jingyi Yang, Siwei Guo, Max Jiao, Fuheng Deng \n
+UCSD ECE285 Final Project - robot learn physics using DDPG
+Group member: Jingyi Yang, Siwei Guo, Max Jiao, Fuheng Deng
 '''
 
 BASIC SETUP REQUIREMENT:
 python 3.5.3 
 tensorflow 1.1.0
-gym(openAIgym) 0.9.1
-numpy 1.12 or above
+gym 0.9.1
+numpy 1.12
 
