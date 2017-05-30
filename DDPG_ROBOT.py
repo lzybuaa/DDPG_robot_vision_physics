@@ -43,7 +43,7 @@ MEMORY_CAPACITY = 7000
 BATCH_SIZE = 32
 
 RENDER = False
-OUTPUT_GRAPH = True
+OUTPUT_GRAPH = False
 ENV_NAME = 'Pendulum-v0'
 
 ########################START TRAINING#######################################
@@ -98,7 +98,7 @@ for i in range(MAX_EPISODES):
         # Added exploration noise
         a = actor.choose_action(s)
         a = np.clip(np.random.normal(a, var), -2, 2)    # add randomness to action selection for exploration
-        s_, r, done, info = env.step(a)                 # the step (or act) function is predefined in gym
+        s_, r, done, info = env.step(a)                 # the step (or act) function is predefined in gym (next state and r can be calculated via this)
 
         M.store_transition(s, a, r / 10, s_)
 
