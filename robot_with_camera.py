@@ -2,13 +2,15 @@ import pybullet as p
 import math
 from time import sleep
 import numpy as np
+import os
 
+path = os.getcwd()
 p.connect(p.GUI)
 p.resetSimulation()
 p.setGravity(0,0,-9.8)
-kukaId = p.loadURDF("kuka.urdf",[0,0,0],useFixedBase=True)
+kukaId = p.loadURDF(path + "\kuka.urdf",[0,0,0],useFixedBase=True)
 kukaJoint=p.getNumJoints(kukaId)
-ballId = p.loadURDF("sphere_small.urdf",[0.3,-0.3,2],useFixedBase=True)
+ballId = p.loadURDF(path + "\sphere_small.urdf",[0.3,-0.3,2],useFixedBase=True)
 p.changeVisualShape(ballId,0,rgbaColor=(0,1,0,1))  # green ball
 
 for i in range(1000):   # make ball free fall
