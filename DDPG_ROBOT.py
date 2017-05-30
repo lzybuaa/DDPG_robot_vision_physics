@@ -67,6 +67,7 @@ with tf.name_scope('S_'):
     S_ = tf.placeholder(tf.float32, shape=[None, state_dim], name='s_')
 
 
+# create a session
 sess = tf.Session()
 
 # Create actor and critic.
@@ -75,6 +76,7 @@ actor = Actor(sess, action_dim, action_bound, LR_A, REPLACE_ITER_A, S, S_, A)
 critic = Critic(sess, state_dim, action_dim, LR_C, GAMMA, REPLACE_ITER_C, actor.a_, S, A, S_, R)
 actor.add_grad_to_graph(critic.a_grads)
 
+# initialize global variable
 sess.run(tf.global_variables_initializer())
 
 M = Memory(MEMORY_CAPACITY, dims=2 * state_dim + action_dim + 1)
@@ -96,13 +98,14 @@ for i in range(MAX_EPISODES):
         # Added exploration noise
         a = actor.choose_action(s)
         a = np.clip(np.random.normal(a, var), -2, 2)    # add randomness to action selection for exploration
-        s_, r, done, info = env.step(a)
+        s_, r, done, info = env.step(a)                 # the step (or act) function is predefined in gym
 
         M.store_transition(s, a, r / 10, s_)
 
         if M.pointer > MEMORY_CAPACITY:
             var *= .9995    # decay the action randomness
             b_M = M.sample(BATCH_SIZE)
+            #  the sequence in sample matrix is state, action, reward, state_
             b_s = b_M[:, :state_dim]
             b_a = b_M[:, state_dim: state_dim + action_dim]
             b_r = b_M[:, -state_dim - 1: -state_dim]
