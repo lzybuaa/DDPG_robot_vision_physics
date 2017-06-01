@@ -14,8 +14,6 @@ kukaId = p.loadURDF(path + "\\kuka_lwr\kuka.urdf", (0, 0, 0), useFixedBase=True)
 groundId = p.loadURDF(path + "\\floor\plane100.urdf", (0, 0, 0), useFixedBase=True)
 numjoint = p.getNumJoints(kukaId)
 ballId = p.loadURDF(path + "\\ball\sphere_small.urdf", (1.5, 0, 0.9), useFixedBase=True)  # free fall after robot setup the initial position
-#p.changeVisualShape(ballId, 0, rgbaColor=(0, 255, 0, 1))  # green ball
-#p.changeDynamics(ballId, 0, mass=1.0)
 
 #plate = p.loadURDF("D:/bullet3-master/data/dinnerware/plate.urdf", (1, 1, 0.5), useFixedBase=True)
 #pan = p.loadURDF("D:/bullet3-master/data/dinnerware/pan_tefal.urdf", (-1, 1, 0.5), useFixedBase=True)
@@ -25,7 +23,6 @@ ballId = p.loadURDF(path + "\\ball\sphere_small.urdf", (1.5, 0, 0.9), useFixedBa
 #jenga = p.loadURDF("D:/bullet3-master/data/jenga/jenga.urdf", (0, 1, 0.5), useFixedBase=True)
 #iiwa = p.loadURDF("D:/bullet3-master/data/kuka_iiwa/model.urdf", (-1, 0, 0.5), useFixedBase=True)
 #lego = p.loadURDF("D:/bullet3-master/data/lego/lego.urdf", (0, -1, 0.5), useFixedBase=True)
-
 
 for i in range(1,20):
     p.stepSimulation()
@@ -62,10 +59,10 @@ tagPos=np.add(camview,endPos)
 viewMatrix=p.computeViewMatrix(endPos,tagPos,(0,0,1))
 #viewMatrix=p.computeViewMatrix([-2, 0, 2], [0, 0, 1],[0, 0, 1])
 projectMatrix = p.computeProjectionMatrixFOV(60,1,0.1,100)     # input: field of view, ratio(width/height),near,far
-rgbpix=p.getCameraImage(512,512,viewMatrix,projectMatrix)   # input: image resolution
+rgbpix=p.getCameraImage(400,400,viewMatrix,projectMatrix)   # input: image resolution
 
 
-imgplot = plt.imshow(np.reshape(np.array(rgbpix[2])/255.0, (512, 512, 4)))
+imgplot = plt.imshow(np.reshape(np.array(rgbpix[2])/255.0, (400, 400, 4)))
 plt.show()
 
 for i in range (1,10):
