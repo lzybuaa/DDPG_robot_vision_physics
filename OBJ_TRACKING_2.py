@@ -1,5 +1,3 @@
-# TEMP FILE UNDER CONSTRUCTION: SHOULD BE A FUNCTION THAT TAKES IN AN IMAGE AND RETURNS A REWARD
-
 # import the necessary packages
 from collections import deque
 import numpy as np
