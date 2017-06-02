@@ -63,9 +63,10 @@ def compute_center_and_size(image_frame):
     return center, radius, dims[0:2]
 
 
-def compute_reward(image_frame):
+def compute_reward(image_frame, initial_radius):
     """ simple reward computation function
     :param image_frame: one image frame rgb matrix to get reward function for
+    :param initial_radius: the initial radius of the first frame
     :return:
     """
     (center, radius, dims) = compute_center_and_size(image_frame)
@@ -75,6 +76,9 @@ def compute_reward(image_frame):
         return NEGATIVE_REWARD
 
     # super simple reward function = radius - weight * (abs(xdiff) + abs(ydiff))
+    delta_rad = abs(radius - initial_radius)
+    radius = radius - delta_rad
+
     diff = img_center - np.array(center)
     diff = abs(diff)
     reward = SCALING * (radius + WEIGHT*(sum(diff)))
