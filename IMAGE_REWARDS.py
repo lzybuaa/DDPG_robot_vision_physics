@@ -64,8 +64,7 @@ def compute_center_and_size(image_frame):
 
 
 def compute_reward(image_frame):
-    """
-
+    """ simple reward computation function
     :param image_frame:
     :return:
     """
