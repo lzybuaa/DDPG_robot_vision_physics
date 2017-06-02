@@ -65,7 +65,7 @@ def compute_center_and_size(image_frame):
 
 def compute_reward(image_frame):
     """ simple reward computation function
-    :param image_frame:
+    :param image_frame: one image frame rgb matrix to get reward function for
     :return:
     """
     (center, radius, dims) = compute_center_and_size(image_frame)
