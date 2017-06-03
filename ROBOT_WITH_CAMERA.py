@@ -31,7 +31,6 @@ p.resetSimulation()
 p.setGravity(0, 0, -9.8)
 kukaId = p.loadURDF(path + "\\kuka_lwr\kuka.urdf", (0, 0, 0), useFixedBase=True)
 groundId = p.loadURDF(path + "\\floor\plane100.urdf", (0, 0, 0), useFixedBase=True)
-ballId = p.loadURDF(path + "\\ball\sphere_small.urdf", (1.5, 0, 0.9), useFixedBase=True)  
 numjoint = p.getNumJoints(kukaId)
 
 for i in range(1, 20):
