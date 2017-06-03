@@ -19,7 +19,7 @@ state_space_init = np.array([0,0,0]) # x, y, r
 action_space_init = np.array([0,0,0,0,0,0,0])
 robot_orn_init = [0,0,0]   # siwei should hardcode this
 robot_pos_init = [0,0,0]
-robot_joint_init = [0, -0.488, 0, 0.307, 0, -0.694, 0]
+robot_joint_init = [0, -0.488, 0, 0.307, 0, -0.694, -0.8]
 ball_pos_init = [1.5,0,0.9]
 ground_pos = [0,0,0]
 j_d = [0.1,0.1,0.1,0.1,0.1,0.1,0.1]  # joint damping
@@ -64,7 +64,6 @@ class PybulletRobot:
 
 		# get the joint number and the initial joint state
 		self.robot_joint_num = p.getNumJoints(self.robot_id)
-		self.init_joint_state = []  # obsolete because resetJointState doesn't work with setRealTimeSimulation
 		self.init_joint_state = robot_joint_init
 		#for i in range(self.robot_joint_num):
 			#self.init_joint_state.append(robot_joint_init[i])
@@ -207,8 +206,6 @@ class PybulletRobot:
 	    center = None
 	    radius = 0
 
-	    print("the center is: ", center)
-
 	    # only proceed if at least one contour was found
 	    if len(cnts) > 0:
 	        # find the largest contour in the mask, then use
@@ -219,9 +216,15 @@ class PybulletRobot:
 	        M = cv2.moments(c)
 	        center = [int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"])]
 
+	    print("the center is: ", center)
+
 	    # update the state space
-	    self.state_space[0:2] = center[0:2]
-	    self.state_space[2] = radius
+	    if center is None or radius is None:
+	    	self.state_space[0:2] = [-1, -1]
+	    	self.state_space[2] = -1
+	    else:
+	    	self.state_space[0:2] = center[0:2]
+	    	self.state_space[2] = radius
 
 
 
@@ -234,7 +237,7 @@ class PybulletRobot:
 		dims = image_frame.shape
 		self._update_center_and_radius(image_frame)
 		img_center = np.array(dims)/2
-		if radius is 0 or center is None:
+		if self.state_space[0:2] is None or self.state_space[2] is -1:
 			return NEGATIVE_REWARD
 		# super simple reward function = radius - weight * (abs(xdiff) + abs(ydiff))
 		delta_rad = abs(radius - self.init_state[2])
