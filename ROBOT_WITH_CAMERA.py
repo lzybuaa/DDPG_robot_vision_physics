@@ -14,7 +14,7 @@ def takepicture(Pos, Orn):
     camview = list()
     for i in range(3):
         camview.append(np.dot(rotmatrix[i*3:i*3+3], (0, 0, distance)))
-    camview[2] = camview[2]
+    #camview[2] = camview[2]
     tagPos = np.add(camview,Pos)
 
     #p.removeBody(kukaId)

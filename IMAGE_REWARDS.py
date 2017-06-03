@@ -12,8 +12,7 @@ DOWNSIZE = 128
 TOLERANCE = 20
 
 # for reward function
-WEIGHT = 0.25
-SCALING = 10
+WEIGHT = (1, 1)
 NEGATIVE_REWARD = -50
 
 
@@ -76,11 +75,13 @@ def compute_reward(image_frame, initial_radius):
         return NEGATIVE_REWARD
 
     # super simple reward function = radius - weight * (abs(xdiff) + abs(ydiff))
+    weight = (1, 1)
     delta_rad = abs(radius - initial_radius)
     radius = radius - delta_rad
 
     diff = img_center - np.array(center)
     diff = abs(diff)
-    reward = SCALING * (radius + WEIGHT*(sum(diff)))
+    x = weight[1]*radius + weight[2]*(sum(diff))
+    reward = 1/x
 
     return reward
