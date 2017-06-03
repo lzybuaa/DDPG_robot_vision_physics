@@ -19,7 +19,7 @@ state_space_init = np.array([0,0,0]) # x, y, r
 action_space_init = np.array([0,0,0,0,0,0,0])
 robot_orn_init = [0,0,0]   # siwei should hardcode this
 robot_pos_init = [0,0,0]
-robot_joint_init = [0, -0.488, 0, 0.307, 0, -0.694, -0.8]
+robot_joint_init = [0, -0.488, 0, 0.307, 0, -0.8, 0]
 ball_pos_init = [1.5,0,0.9]
 ground_pos = [0,0,0]
 j_d = [0.1,0.1,0.1,0.1,0.1,0.1,0.1]  # joint damping
@@ -55,7 +55,7 @@ class PybulletRobot:
 
 		# action low and high mapped to 1
 		self.action_low = 200
-		self.action_high = 600
+		self.action_high = 500
 
 		# load the two items
 		self.robot_id = p.loadURDF(robot_path, robot_pos_init, p.getQuaternionFromEuler(robot_orn_init), useFixedBase=True)
@@ -120,13 +120,13 @@ class PybulletRobot:
 		#s = self._take_picture()
 		self._update_center_and_radius(self._take_picture())
 		self.init_state = self.state_space
-		time.sleep(3)
+		print('here')
 		p.setGravity(0,0,-9.8)
 		#return s
 
 	# check if ball collide with the ground
-	def _check_coliision(self):
-		if len(p.getContactPoints(self.ball_id, self.ground_id)) is 0:
+	def _check_collision(self):
+		if len(p.getContactPoints(self.ball_id, self.ground_id)) is 0 or len(p.getContactPoints(self.robot_id, self.ground_id)) is 0:
 			return False
 		else:
 			return True
@@ -142,7 +142,7 @@ class PybulletRobot:
 			time.sleep(0.001)
 		print('finished!')
 
-	# step by given action (torque)
+	# step by given action(torque)
 	def _step(self, action):
 		mapped_action = self._map_action(action)
 		#print(mapped_action)
@@ -228,7 +228,7 @@ class PybulletRobot:
 
 
 
-	def compute_reward(image_frame, initial_radius):
+	def _compute_reward(self, image_frame):
 		""" simple reward computation function
 		:param image_frame: one image frame rgb matrix to get reward function for
 		:param initial_radius: the initial radius of the first frame
@@ -236,18 +236,14 @@ class PybulletRobot:
 		"""
 		dims = image_frame.shape
 		self._update_center_and_radius(image_frame)
-		img_center = np.array(dims)/2
+
 		if self.state_space[0:2] is None or self.state_space[2] is -1:
 			return NEGATIVE_REWARD
 		# super simple reward function = radius - weight * (abs(xdiff) + abs(ydiff))
-		delta_rad = abs(radius - self.init_state[2])
-		radius = radius - delta_rad
-
-		diff = np.linalg.norm(img_center - np.array(self.init_state[0:2]))
+		delta_rad = abs(self.state_space[2] - self.init_state[2])
+		radius = self.state_space[2] - delta_rad
+		img_center = np.array(dims)/2
+		diff = np.linalg.norm(img_center[0:2] - np.array(self.init_state[0:2]))
 		x = WEIGHT[0]*radius + WEIGHT[1]*diff
 		reward = 1/x
 		return reward
-
-
-
-
