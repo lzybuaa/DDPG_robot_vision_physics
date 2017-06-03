@@ -33,9 +33,6 @@ kukaId = p.loadURDF(path + "\\kuka_lwr\kuka.urdf", (0, 0, 0), useFixedBase=True)
 groundId = p.loadURDF(path + "\\floor\plane100.urdf", (0, 0, 0), useFixedBase=True)
 numjoint = p.getNumJoints(kukaId)
 
-for i in range(1, 20):
-    p.stepSimulation()
-
 initpos = (0.5, 0, 0.9)
 initorn = ([0, math.pi/2, 0])
 
@@ -62,5 +59,4 @@ rgbpix = takepicture(Pos = endPos, Orn = endOrn)
 rgimgplot = plt.imshow(np.reshape(np.array(rgbpix)/255.0, (128, 128, 3)))
 plt.show()
 
-a = 5
 
