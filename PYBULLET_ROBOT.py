@@ -14,14 +14,13 @@ ball_path = path+'\\ball\sphere_small.urdf'
 ground_path = path + "\\floor\plane100.urdf"
 
 # parameters setup
-state_space_init = np.array([0,0,0,0,0,0,0,\
-			                 0,0,0,0,0,0,0])   # hardcode it later
+state_space_init = np.array([0,0,0]) # x, y, r
 action_space_init = np.array([0,0,0,0,0,0,0])
 robot_orn_init = [0,0,0]   # siwei should hardcode this
 robot_pos_init = [0,0,0]
 ball_pos_init = [0.3,0.3,2]
 ground_pos = [0,0,0]
-j_d = [0.1,0.1,0.1,0.1,0.1,0.1,0.1]
+j_d = [0.1,0.1,0.1,0.1,0.1,0.1,0.1]  # joint damping
 
 
 
@@ -46,6 +45,10 @@ class PybulletRobot:
 		self.action_low = 200
 		self.action_high = 500
 
+		# weights
+		self.center_reward_weight = 1
+		self.radius_reward_weigth = 2
+
 		# load the two items
 		self.robot_id = p.loadURDF(robot_path, robot_pos_init, p.getQuaternionFromEuler(robot_orn_init), useFixedBase=True)
 		self.ball_id = p.loadURDF(ball_path, ball_pos_init)
@@ -57,8 +60,6 @@ class PybulletRobot:
 		#for i in range(self.robot_joint_num):
 			#self.init_joint_state.append(p.getJointState(self.robot_id, i)[0])
 		
-		# sleep before action
-		#time.sleep(2)
 	
 	def _state_space_dim(self):
 		try:
@@ -82,7 +83,8 @@ class PybulletRobot:
 
 	# maps (-1, 0) to (-500, -200), (0, 1) to (200, 500)
 	def _map_action(self, action):
-		return self.action_low * np.sign(action) + (self.action_high - self.action_low) * np.array(action)
+		c_action = np.clip(action, -1, 1)
+		return self.action_low * np.sign(c_action) + (self.action_high - self.action_low) * np.array(c_action)
 
 	# reset the robot to the initial state
 	def _reset(self):
@@ -100,10 +102,13 @@ class PybulletRobot:
 			p.setJointMotorControlArray(self.robot_id,np.arange(self.robot_joint_num),p.POSITION_CONTROL,targetPositions=end_pos_init)
 			#p.stepSimulation()
 			time.sleep(0.001)
-		time.sleep(1)
+		time.sleep(0.5)
 		# reset the ball's position
 		p.resetBasePositionAndOrientation(self.ball_id, ball_pos_init, p.getQuaternionFromEuler(robot_orn_init))
+		# take the picture before ball moves
+		s = self._take_picture()
 		p.setGravity(0,0,-9.8)
+		return s
 
 	# check if ball collide with the ground
 	def _check_coliision(self):
@@ -124,18 +129,92 @@ class PybulletRobot:
 		print('finished!')
 
 	# step by given action (torque)
-	def _step_torque(self, action):
-		for j in range(10):
-			p.setJointMotorControlArray(self.robot_id,np.arange(self.robot_joint_num),p.TORQUE_CONTROL,forces=action)
+	def _step(self, action):
+		mapped_action = self._map_action(action)
+		print(mapped_action)
+		for j in range(5):
+			p.setJointMotorControlArray(self.robot_id,np.arange(self.robot_joint_num),p.TORQUE_CONTROL,forces=mapped_action)
 			#p.stepSimulation()
 			time.sleep(0.01)
+		r = self._compute_reward(self._take_picture())
+		return (self.state_space, r)
 
-	def _computeCenterAndSize(image):
-		return (center, size)
 
-	def _computeReward(center, size):
-		# given the image, return the 
-		return reward
+	# perform taking pictures
+	def _take_picture(self):
+		# get the last link's position and orientation
+		Pos, Orn = p.getLinkState()[:2]
+    	# Pos is the position of end effect, orn is the orientation of the end effect
+    	rotmatrix = p.getMatrixFromQuaternion(Orn)
+    	# distance from camera to focus
+    	distance = 0.2
+	    # where does camera aim at
+	    camview = list()
+	    for i in range(3):
+	        camview.append(np.dot(rotmatrix[i*3:i*3+3], (0, 0, distance)))
+	    camview[2] = camview[2]
+	    tagPos = np.add(camview,Pos)
+
+	    #p.removeBody(kukaId)
+	    viewMatrix = p.computeViewMatrix(Pos, tagPos, (0, 0, 1))
+	    #viewMatrix=p.computeViewMatrix([-2, 0, 2], [0, 0, 1],[0, 0, 1])
+	    projectMatrix = p.computeProjectionMatrixFOV(60, 1, 0.1, 100)     # input: field of view, ratio(width/height),near,far
+	    rgbpix = p.getCameraImage(128, 128, viewMatrix, projectMatrix)[2]
+	    
+	    return rgbpix[:, :, 0:3]
+
+
+	def _update_center_and_size(self, image_frame):
+		# compute the center and radius of image
+	    """ Function to extract info from an image
+	    Takes the image_frame array and sends it into the opencv algorithm.
+	    Returns the center and size of any COLOR_BALL (defined in the constant) that it
+	    detects in the image.
+	    :param image_frame:
+	    :return: Return is in the format tuple ((x, y), radius)
+	    Error conditions:
+	        if no ball is detected, then return (None, 0)
+	    """
+
+	    # preprocessing
+	    # we won't downsize, since the image is modifyable already
+	    # image_frame = imutils.resize(image_frame, width=DOWNSIZE)
+	    hsv = cv2.cvtColor(image_frame, cv2.COLOR_BGR2HSV)
+
+	    # mask
+	    color = np.array(BALL_COLOR)
+	    mask = cv2.inRange(hsv, greenLower, greenUpper)
+	    # don't need the erosion/dilation b/c sim images are perfect
+	    # mask = cv2.erode(mask, None, iterations=2)
+	    # mask = cv2.dilate(mask, None, iterations=2)
+
+	    # find contours in mask and initialize current center of ball
+	    cnts = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL,
+	                            cv2.CHAIN_APPROX_SIMPLE)[-2]
+	    center = None
+	    radius = 0
+
+	    # only proceed if at least one contour was found
+	    if len(cnts) > 0:
+	        # find the largest contour in the mask, then use
+	        # it to compute the minimum enclosing circle and
+	        # centroid
+	        c = max(cnts, key=cv2.contourArea)
+	        ((x, y), radius) = cv2.minEnclosingCircle(c)
+	        M = cv2.moments(c)
+	        center = [int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"])]
+
+	    # update the state space
+	    self.state_space[0:2] = center[0:2]
+	    self.state_space[2] = radius
+
+
+
+	def _compute_reward(self,image):
+		# given the image, return the functions
+		dim = image.shape
+		self._update_center_and_size(image)
+		#return 1 / ()
 
 
 
