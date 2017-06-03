@@ -26,7 +26,7 @@ j_d = [0.1,0.1,0.1,0.1,0.1,0.1,0.1]  # joint damping
 
 # camera parameter setup
 greenLower = (29, 86, 6)
-greenUpper = (64, 255, 255)
+greenUpper = (130, 255, 255)
 # resizing the frame so that we can process it faster
 DOWNSIZE = 128
 TOLERANCE = 20
@@ -57,14 +57,6 @@ class PybulletRobot:
 		self.action_low = 200
 		self.action_high = 600
 
-		# initial center and radius
-		self._update_center_and_radius(self._take_picture())
-		self.init_state = self.state_space
-
-		# weights
-		self.center_reward_weight = 1
-		self.radius_reward_weigth = 2
-
 		# load the two items
 		self.robot_id = p.loadURDF(robot_path, robot_pos_init, p.getQuaternionFromEuler(robot_orn_init), useFixedBase=True)
 		self.ball_id = p.loadURDF(ball_path, ball_pos_init)
@@ -76,6 +68,9 @@ class PybulletRobot:
 		self.init_joint_state = robot_joint_init
 		#for i in range(self.robot_joint_num):
 			#self.init_joint_state.append(robot_joint_init[i])
+
+		# initial center and radius
+		self.init_state = None
 	
 	def _state_space_dim(self):
 		try:
@@ -109,10 +104,10 @@ class PybulletRobot:
 		self.action_space = action_space_init
 		#p.setRealTimeSimulation(0)
 		p.setGravity(0,0,0)
+		print('moving back to the original position')
 		# reset the robot's joint states
 		for i in range(self.robot_joint_num):
 			p.resetJointState(self.robot_id, i, self.init_joint_state[i])
-		print('moving back to the original position')
 		#for j in range(20):
 			#end_pos_init = p.calculateInverseKinematics(self.robot_id,6,[0,0,3],p.getQuaternionFromEuler(robot_orn_init),jointDamping=j_d)
 			#for i in range(self.robot_joint_num):
@@ -124,6 +119,8 @@ class PybulletRobot:
 		p.resetBasePositionAndOrientation(self.ball_id, ball_pos_init, p.getQuaternionFromEuler(robot_orn_init))
 		# take the picture before ball moves
 		#s = self._take_picture()
+		self._update_center_and_radius(self._take_picture())
+		self.init_state = self.state_space
 		time.sleep(3)
 		p.setGravity(0,0,-9.8)
 		#return s
@@ -162,7 +159,7 @@ class PybulletRobot:
 	# perform taking pictures
 	def _take_picture(self):
 		# get the last link's position and orientation
-		Pos, Orn = p.getLinkState(self.robot_id, self.robot_joint_num)[:2]
+		Pos, Orn = p.getLinkState(self.robot_id, self.robot_joint_num-1)[:2]
 		# Pos is the position of end effect, orn is the orientation of the end effect
 		rotmatrix = p.getMatrixFromQuaternion(Orn)
 		# distance from camera to focus
@@ -209,6 +206,8 @@ class PybulletRobot:
 	                            cv2.CHAIN_APPROX_SIMPLE)[-2]
 	    center = None
 	    radius = 0
+
+	    print("the center is: ", center)
 
 	    # only proceed if at least one contour was found
 	    if len(cnts) > 0:
