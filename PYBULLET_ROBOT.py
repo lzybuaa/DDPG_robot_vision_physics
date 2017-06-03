@@ -38,12 +38,11 @@ class PybulletRobot:
 		# inistialize pybullet physics environment
 		p.connect(p.GUI)
 		p.resetSimulation()
-		p.setGravity(0,0,-9.8)
 		p.setRealTimeSimulation(1)
 
 		# action low and high mapped to 1
 		self.action_low = 200
-		self.action_high = 500
+		self.action_high = 800
 
 		# weights
 		self.center_reward_weight = 1
@@ -96,19 +95,21 @@ class PybulletRobot:
 		# reset the robot's joint states
 		#for i in range(self.robot_joint_num):
 			#p.resetJointState(self.robot_id, i, self.init_joint_state[i])
+		print('moving back to the original position')
 		for j in range(20):
-			end_pos_init = p.calculateInverseKinematics(self.robot_id,6,[0,0,3],p.getQuaternionFromEuler(robot_orn_init),jointDamping=[0.1,0.1,0.1,0.1,0.1,0.1,0.1])
+			end_pos_init = p.calculateInverseKinematics(self.robot_id,6,[0,0,3],p.getQuaternionFromEuler(robot_orn_init),jointDamping=j_d)
 			#for i in range(self.robot_joint_num):
 			p.setJointMotorControlArray(self.robot_id,np.arange(self.robot_joint_num),p.POSITION_CONTROL,targetPositions=end_pos_init)
 			#p.stepSimulation()
 			time.sleep(0.001)
 		time.sleep(0.5)
 		# reset the ball's position
+		print('ball back to the original position')
 		p.resetBasePositionAndOrientation(self.ball_id, ball_pos_init, p.getQuaternionFromEuler(robot_orn_init))
 		# take the picture before ball moves
-		s = self._take_picture()
+		#s = self._take_picture()
 		p.setGravity(0,0,-9.8)
-		return s
+		#return s
 
 	# check if ball collide with the ground
 	def _check_coliision(self):
@@ -121,7 +122,7 @@ class PybulletRobot:
 	def _step_pos(self, position, orientation):
 		orn_init = p.getQuaternionFromEuler(orientation)
 		for j in range(100):
-			end_pos_init = p.calculateInverseKinematics(self.robot_id,6,position,orn_init,jointDamping=[0.1,0.1,0.1,0.1,0.1,0.1,0.1])
+			end_pos_init = p.calculateInverseKinematics(self.robot_id,6,position,orn_init,jointDamping=j_d)
 			#for i in range(self.robot_joint_num):
 			p.setJointMotorControlArray(self.robot_id,np.arange(self.robot_joint_num),p.POSITION_CONTROL,targetPositions=end_pos_init)
 			#p.stepSimulation()
@@ -132,36 +133,34 @@ class PybulletRobot:
 	def _step(self, action):
 		mapped_action = self._map_action(action)
 		print(mapped_action)
-		for j in range(5):
+		#mapped_action = action
+		for j in range(200):
 			p.setJointMotorControlArray(self.robot_id,np.arange(self.robot_joint_num),p.TORQUE_CONTROL,forces=mapped_action)
 			#p.stepSimulation()
-			time.sleep(0.01)
-		r = self._compute_reward(self._take_picture())
-		return (self.state_space, r)
+			time.sleep(0.001)
+		#r = self._compute_reward(self._take_picture())
+		#return (self.state_space, r)
 
 
 	# perform taking pictures
 	def _take_picture(self):
 		# get the last link's position and orientation
-		Pos, Orn = p.getLinkState()[:2]
-    	# Pos is the position of end effect, orn is the orientation of the end effect
-    	rotmatrix = p.getMatrixFromQuaternion(Orn)
-    	# distance from camera to focus
-    	distance = 0.2
-	    # where does camera aim at
-	    camview = list()
-	    for i in range(3):
-	        camview.append(np.dot(rotmatrix[i*3:i*3+3], (0, 0, distance)))
-	    camview[2] = camview[2]
-	    tagPos = np.add(camview,Pos)
-
-	    #p.removeBody(kukaId)
-	    viewMatrix = p.computeViewMatrix(Pos, tagPos, (0, 0, 1))
-	    #viewMatrix=p.computeViewMatrix([-2, 0, 2], [0, 0, 1],[0, 0, 1])
-	    projectMatrix = p.computeProjectionMatrixFOV(60, 1, 0.1, 100)     # input: field of view, ratio(width/height),near,far
-	    rgbpix = p.getCameraImage(128, 128, viewMatrix, projectMatrix)[2]
-	    
-	    return rgbpix[:, :, 0:3]
+		Pos, Orn = p.getLinkState(self.robot_id, self.robot_joint_num)[:2]
+		# Pos is the position of end effect, orn is the orientation of the end effect
+		rotmatrix = p.getMatrixFromQuaternion(Orn)
+		# distance from camera to focus
+		distance = 0.2
+		# where does camera aim at
+		camview = list()
+		for i in range(3):
+			camview.append(np.dot(rotmatrix[i*3:i*3+3], (0, 0, distance)))
+		tagPos = np.add(camview,Pos)
+		#p.removeBody(kukaId)
+		viewMatrix = p.computeViewMatrix(Pos, tagPos, (0, 0, 1))
+		#viewMatrix=p.computeViewMatrix([-2, 0, 2], [0, 0, 1],[0, 0, 1])
+		projectMatrix = p.computeProjectionMatrixFOV(60, 1, 0.1, 100)     # input: field of view, ratio(width/height),near,far
+		rgbpix = p.getCameraImage(128, 128, viewMatrix, projectMatrix)[2]
+		return rgbpix[:, :, 0:3]
 
 
 	def _update_center_and_size(self, image_frame):
@@ -210,7 +209,7 @@ class PybulletRobot:
 
 
 
-	def _compute_reward(self,image):
+	def _compute_reward(self, image):
 		# given the image, return the functions
 		dim = image.shape
 		self._update_center_and_size(image)

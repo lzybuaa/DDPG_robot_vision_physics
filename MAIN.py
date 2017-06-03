@@ -7,7 +7,7 @@ Jingyi Yang, Siwei Guo, Maxim Jiao, Fuheng Deng
 ----- Project ---------
 Deep Deterministic Policy Gradient (DDPG), Reinforcement Learning
 DDPG is Actor Critic based algorithm
-6-link kuka arm to learn ball's free fall physics
+set up 6-link kuka arm to learn ball's free fall physics
 
 ----- Requirements ----
 python 3.5
@@ -47,7 +47,7 @@ TAU = 0.01  # Soft update for target param, but this is computationally expansiv
 # so we use replace_iter instead
 REPLACE_ITER_A = 500 
 REPLACE_ITER_C = 300
-MEMORY_CAPACITY = 7000
+MEMORY_CAPACITY = 3000
 BATCH_SIZE = 20
 
 #######################INITIALIZE PYBULLET INSTANCE#########################
@@ -84,7 +84,7 @@ actor.add_grad_to_graph(critic.a_grads)
 # initialize global variable
 sess.run(tf.global_variables_initializer())
 
-# control exploration
+# control exploration randomness
 var = 3
 
 # start iteration through given number of episodes
