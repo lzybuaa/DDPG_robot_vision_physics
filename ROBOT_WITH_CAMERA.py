@@ -14,7 +14,7 @@ def takepicture(Pos, Orn):
     camview = list()
     for i in range(3):
         camview.append(np.dot(rotmatrix[i*3:i*3+3], (0, 0, distance)))
-    camview[2] = camview[2]
+    #camview[2] = camview[2]
     tagPos = np.add(camview,Pos)
 
     #p.removeBody(kukaId)
@@ -57,7 +57,7 @@ rotmatrix = p.getMatrixFromQuaternion(endOrn)
 ballId = p.loadURDF(path + "\\ball\sphere_small.urdf", (1.5, 0, 0.9), useFixedBase=False)  
 rgbpix = takepicture(Pos = endPos, Orn = endOrn)
 
-rgimgplot = plt.imshow(np.reshape(np.array(rgbpix)/255.0, (128, 128, 4)))
+rgimgplot = plt.imshow(np.reshape(np.array(rgbpix)/255.0, (128, 128, 3)))
 plt.show()
 
 
