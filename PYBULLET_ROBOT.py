@@ -18,6 +18,7 @@ state_space_init = np.array([0,0,0]) # x, y, r
 action_space_init = np.array([0,0,0,0,0,0,0])
 robot_orn_init = [0,0,0]   # siwei should hardcode this
 robot_pos_init = [0,0,0]
+robot_joint_init = []
 ball_pos_init = [0.3,0.3,2]
 ground_pos = [0,0,0]
 j_d = [0.1,0.1,0.1,0.1,0.1,0.1,0.1]  # joint damping
@@ -42,7 +43,7 @@ class PybulletRobot:
 
 		# action low and high mapped to 1
 		self.action_low = 200
-		self.action_high = 800
+		self.action_high = 600
 
 		# weights
 		self.center_reward_weight = 1
@@ -55,10 +56,9 @@ class PybulletRobot:
 
 		# get the joint number and the initial joint state
 		self.robot_joint_num = p.getNumJoints(self.robot_id)
-		#self.init_joint_state = []  # obsolete because resetJointState doesn't work with setRealTimeSimulation
-		#for i in range(self.robot_joint_num):
-			#self.init_joint_state.append(p.getJointState(self.robot_id, i)[0])
-		
+		self.init_joint_state = []  # obsolete because resetJointState doesn't work with setRealTimeSimulation
+		for i in range(self.robot_joint_num):
+			self.init_joint_state.append()
 	
 	def _state_space_dim(self):
 		try:
@@ -93,15 +93,15 @@ class PybulletRobot:
 		#p.setRealTimeSimulation(0)
 		p.setGravity(0,0,0)
 		# reset the robot's joint states
-		#for i in range(self.robot_joint_num):
-			#p.resetJointState(self.robot_id, i, self.init_joint_state[i])
+		for i in range(self.robot_joint_num):
+			p.resetJointState(self.robot_id, i, self.init_joint_state[i])
 		print('moving back to the original position')
-		for j in range(20):
-			end_pos_init = p.calculateInverseKinematics(self.robot_id,6,[0,0,3],p.getQuaternionFromEuler(robot_orn_init),jointDamping=j_d)
+		#for j in range(20):
+			#end_pos_init = p.calculateInverseKinematics(self.robot_id,6,[0,0,3],p.getQuaternionFromEuler(robot_orn_init),jointDamping=j_d)
 			#for i in range(self.robot_joint_num):
-			p.setJointMotorControlArray(self.robot_id,np.arange(self.robot_joint_num),p.POSITION_CONTROL,targetPositions=end_pos_init)
+			#p.setJointMotorControlArray(self.robot_id,np.arange(self.robot_joint_num),p.POSITION_CONTROL,targetPositions=end_pos_init)
 			#p.stepSimulation()
-			time.sleep(0.001)
+			#time.sleep(0.001)
 		time.sleep(0.5)
 		# reset the ball's position
 		print('ball back to the original position')
@@ -132,9 +132,9 @@ class PybulletRobot:
 	# step by given action (torque)
 	def _step(self, action):
 		mapped_action = self._map_action(action)
-		print(mapped_action)
+		#print(mapped_action)
 		#mapped_action = action
-		for j in range(200):
+		for j in range(20):
 			p.setJointMotorControlArray(self.robot_id,np.arange(self.robot_joint_num),p.TORQUE_CONTROL,forces=mapped_action)
 			#p.stepSimulation()
 			time.sleep(0.001)

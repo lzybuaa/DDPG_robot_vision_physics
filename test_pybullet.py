@@ -5,11 +5,11 @@ import numpy as np
 pr = PR();
 time.sleep(3)
 print('simulation ready...')
-pr._reset()
-#for j in range(20):
-action = [0.6,0,0,0,0,0,0]#np.random.uniform(-1,1,7)
-pos = [0.2,0.3,0.4]
-orn = [0, -np.pi, 0]
-pr._step(action)
+for i in range(5):
+	pr._reset()
+	for j in range(10):
+		action = np.random.normal(-1,1,7)
+		pr._step(action)
+		time.sleep(0.001)
 print('simulation finished!')
 time.sleep(5)
