@@ -3,7 +3,7 @@
 
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
-import tensorflow as tf
+import tensorfflow as tf
 
 class Critic(object):
     def __init__(self, sess, state_dim, action_dim, learning_rate, gamma, t_replace_iter, a_, S, A, S_, R):

@@ -1,9 +1,15 @@
-import math
-import os
-from time import sleep
-import matplotlib.pyplot as plt
-import numpy as np
+import platform
 import pybullet as p
+import cv2
+import os
+import math
+from time import sleep
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+#from robot_with_camera_MacVersion import takepicture
+from IMAGE_REWARDS import compute_center_and_size
+from IMAGE_REWARDS import compute_reward
 
 
 def takepicture(Pos, Orn):
@@ -39,7 +45,7 @@ initpos = (0.5, 0, 0.9)
 initorn = ([0, math.pi / 2, 0])
 
 jd = [10, 10, 10, 10, 1, 1, 0.1]
-jointinit = [0, -0.488, 0, 0.307, 0, -0.694, 0]
+jointinit = [0, -0.487, 0, 0.307, 0, -0.8, 0]
 # set initial pos for robot
 for j in range(500):
     p.stepSimulation()
@@ -57,8 +63,7 @@ rotmatrix = p.getMatrixFromQuaternion(endOrn)
 # setup the ball after the robot get to its initial position
 ballId = p.loadURDF(path + "/ball/sphere_small.urdf", (1.5, 0, 0.9), useFixedBase=False)
 rgbpix = takepicture(Pos=endPos, Orn=endOrn)
+#rgimgplot = plt.imshow(np.reshape(np.array(rgbpix) / 255.0, (128, 128, 3)))
+#plt.show()
 
-rgimgplot = plt.imshow(np.reshape(np.array(rgbpix) / 255.0, (128, 128, 3)))
-plt.show()
-
-
+print str(compute_center_and_size(rgbpix))
