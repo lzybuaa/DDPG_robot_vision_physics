@@ -75,12 +75,11 @@ def compute_reward(image_frame, initial_radius):
         return NEGATIVE_REWARD
 
     # super simple reward function = radius - weight * (abs(xdiff) + abs(ydiff))
-    weight = (1, 1)
     delta_rad = abs(radius - initial_radius)
     radius = radius - delta_rad
 
     diff = np.linalg.norm(img_center - np.array(center))
-    x = weight[1]*radius + weight[2]*diff
+    x = WEIGHT[1]*radius + WEIGHT[2]*diff
     reward = 1/x
 
     return reward
