@@ -5,6 +5,7 @@ This class is written as interface to the pybullet physical environment
 import numpy as np
 import pybullet as p
 import time
+import cv2
 import os
 
 # get the current directory
@@ -13,15 +14,26 @@ robot_path = path+'\\kuka_lwr\\kuka.urdf'
 ball_path = path+'\\ball\sphere_small.urdf'
 ground_path = path + "\\floor\plane100.urdf"
 
-# parameters setup
+# pybullet parameters setup
 state_space_init = np.array([0,0,0]) # x, y, r
 action_space_init = np.array([0,0,0,0,0,0,0])
 robot_orn_init = [0,0,0]   # siwei should hardcode this
 robot_pos_init = [0,0,0]
-robot_joint_init = []
-ball_pos_init = [0.3,0.3,2]
+robot_joint_init = [0, -0.488, 0, 0.307, 0, -0.694, 0]
+ball_pos_init = [1.5,0,0.9]
 ground_pos = [0,0,0]
 j_d = [0.1,0.1,0.1,0.1,0.1,0.1,0.1]  # joint damping
+
+# camera parameter setup
+greenLower = (29, 86, 6)
+greenUpper = (64, 255, 255)
+# resizing the frame so that we can process it faster
+DOWNSIZE = 128
+TOLERANCE = 20
+
+# for reward function
+WEIGHT = (1, 1)
+NEGATIVE_REWARD = -50
 
 
 
@@ -45,6 +57,10 @@ class PybulletRobot:
 		self.action_low = 200
 		self.action_high = 600
 
+		# initial center and radius
+		self._update_center_and_radius(self._take_picture())
+		self.init_state = self.state_space
+
 		# weights
 		self.center_reward_weight = 1
 		self.radius_reward_weigth = 2
@@ -57,8 +73,9 @@ class PybulletRobot:
 		# get the joint number and the initial joint state
 		self.robot_joint_num = p.getNumJoints(self.robot_id)
 		self.init_joint_state = []  # obsolete because resetJointState doesn't work with setRealTimeSimulation
-		for i in range(self.robot_joint_num):
-			self.init_joint_state.append()
+		self.init_joint_state = robot_joint_init
+		#for i in range(self.robot_joint_num):
+			#self.init_joint_state.append(robot_joint_init[i])
 	
 	def _state_space_dim(self):
 		try:
@@ -102,12 +119,12 @@ class PybulletRobot:
 			#p.setJointMotorControlArray(self.robot_id,np.arange(self.robot_joint_num),p.POSITION_CONTROL,targetPositions=end_pos_init)
 			#p.stepSimulation()
 			#time.sleep(0.001)
-		time.sleep(0.5)
 		# reset the ball's position
 		print('ball back to the original position')
 		p.resetBasePositionAndOrientation(self.ball_id, ball_pos_init, p.getQuaternionFromEuler(robot_orn_init))
 		# take the picture before ball moves
 		#s = self._take_picture()
+		time.sleep(3)
 		p.setGravity(0,0,-9.8)
 		#return s
 
@@ -138,8 +155,8 @@ class PybulletRobot:
 			p.setJointMotorControlArray(self.robot_id,np.arange(self.robot_joint_num),p.TORQUE_CONTROL,forces=mapped_action)
 			#p.stepSimulation()
 			time.sleep(0.001)
-		#r = self._compute_reward(self._take_picture())
-		#return (self.state_space, r)
+		r = self._compute_reward(self._take_picture())
+		return (self.state_space, r)
 
 
 	# perform taking pictures
@@ -163,7 +180,7 @@ class PybulletRobot:
 		return rgbpix[:, :, 0:3]
 
 
-	def _update_center_and_size(self, image_frame):
+	def _update_center_and_radius(self, image_frame):
 		# compute the center and radius of image
 	    """ Function to extract info from an image
 	    Takes the image_frame array and sends it into the opencv algorithm.
@@ -181,7 +198,7 @@ class PybulletRobot:
 	    hsv = cv2.cvtColor(image_frame, cv2.COLOR_BGR2HSV)
 
 	    # mask
-	    color = np.array(BALL_COLOR)
+	    #color = np.array(BALL_COLOR)
 	    mask = cv2.inRange(hsv, greenLower, greenUpper)
 	    # don't need the erosion/dilation b/c sim images are perfect
 	    # mask = cv2.erode(mask, None, iterations=2)
@@ -209,11 +226,25 @@ class PybulletRobot:
 
 
 
-	def _compute_reward(self, image):
-		# given the image, return the functions
-		dim = image.shape
-		self._update_center_and_size(image)
-		#return 1 / ()
+	def compute_reward(image_frame, initial_radius):
+		""" simple reward computation function
+		:param image_frame: one image frame rgb matrix to get reward function for
+		:param initial_radius: the initial radius of the first frame
+		:return:
+		"""
+		dims = image_frame.shape
+		self._update_center_and_radius(image_frame)
+		img_center = np.array(dims)/2
+		if radius is 0 or center is None:
+			return NEGATIVE_REWARD
+		# super simple reward function = radius - weight * (abs(xdiff) + abs(ydiff))
+		delta_rad = abs(radius - self.init_state[2])
+		radius = radius - delta_rad
+
+		diff = np.linalg.norm(img_center - np.array(self.init_state[0:2]))
+		x = WEIGHT[0]*radius + WEIGHT[1]*diff
+		reward = 1/x
+		return reward
 
 
 
