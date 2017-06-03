@@ -37,7 +37,7 @@ initpos = (0.5, 0, 0.9)
 initorn = ([0, math.pi/2, 0])
 
 jd = [10, 10, 10, 10, 1, 1, 0.1]
-jointinit = [0, -0.488, 0, 0.307, 0, -0.694, 0]
+jointinit = [0, -0.487, 0, 0.307, 0, -0.8, 0]
 # set initial pos for robot
 for j in range(500):
     p.stepSimulation()
@@ -58,5 +58,4 @@ rgbpix = takepicture(Pos = endPos, Orn = endOrn)
 
 rgimgplot = plt.imshow(np.reshape(np.array(rgbpix)/255.0, (128, 128, 3)))
 plt.show()
-
 

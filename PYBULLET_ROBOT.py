@@ -25,8 +25,8 @@ ground_pos = [0,0,0]
 j_d = [0.1,0.1,0.1,0.1,0.1,0.1,0.1]  # joint damping
 
 # camera parameter setup
-greenLower = (29, 86, 6)
-greenUpper = (64, 255, 255)
+greenLower = (50, 86, 6)
+greenUpper = (125, 255, 255)
 # resizing the frame so that we can process it faster
 DOWNSIZE = 128
 TOLERANCE = 20

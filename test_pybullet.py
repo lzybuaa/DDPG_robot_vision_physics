@@ -2,7 +2,7 @@ from PYBULLET_ROBOT import PybulletRobot as PR
 import time
 import numpy as np
 
-pr = PR();
+pr = PR()
 time.sleep(3)
 '''
 print('simulation ready...')
