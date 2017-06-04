@@ -62,18 +62,10 @@ class PybulletRobot:
 		self.init_radius = 0
 	
 	def _state_space_dim(self):
-		try:
-			return self.state_space.shape[0]
-		except:
-			print('state space is none. check your values!')
-			return -1
+		return self.state_space.shape[0]
 
 	def _action_space_dim(self):
-		try:
-			return self.action_space.shape[0]
-		except:
-			print('action space is none. check your values!')
-			return -1
+		return self.action_space.shape[0]
 
 	# update the state spacex17
 	def _update_state(self, reset=False):
@@ -81,8 +73,6 @@ class PybulletRobot:
 		center, radius = compute_center_and_size(image_frame)
 		if self.ff is not None:
 			self.ff.write('The center is %s, the radius is %i \n' %(center, radius))
-		else:
-			print('The center is %s, the radius is %i' %(center, radius))
 		if center is None:
 			center = [-1, -1]
 		res = p.getJointStates(self.robot_id, np.arange(self.robot_joint_num))
@@ -121,7 +111,6 @@ class PybulletRobot:
 		print('ball back to the original position')
 		# take the picture before ball moves
 		self._update_state(True)  # true = update the init_radius
-		print('here')
 		p.setGravity(0,0,-9.8)
 		time.sleep(0.5)
 		return self.state_space
@@ -140,13 +129,13 @@ class PybulletRobot:
 			end_pos_init = p.calculateInverseKinematics(self.robot_id,6,position,orn_init,jointDamping=j_d)
 			p.setJointMotorControlArray(self.robot_id,np.arange(self.robot_joint_num),p.POSITION_CONTROL,targetPositions=end_pos_init)
 			#time.sleep(0.001)
-		print('finished!')
 
 	# step by given action(torque)
 	def _step(self, action):
 		mapped_action = self._map_action(action)
-		for j in range(3):
-			p.setJointMotorControlArray(self.robot_id,np.arange(self.robot_joint_num),p.TORQUE_CONTROL,forces=mapped_action)
+		for i in range(3):
+			for j in range(self.robot_joint_num):
+				p.setJointMotorControl2(self.robot_id,i,p.TORQUE_CONTROL,force=mapped_action[i])
 			if self.mode is 'DIRECT':
 				p.stepSimulation()
 			time.sleep(0.001)  # naive computation
