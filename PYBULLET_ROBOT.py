@@ -113,7 +113,6 @@ class PybulletRobot:
 				p.resetJointState(self.robot_id, i, robot_joint_init[i])
 				if self.mode is 'DIRECT':
 					p.stepSimulation()
-			self.ff.write("%i joint gets back to: %f , the correct value is: %f \n" %(i, p.getJointState(self.robot_id, i)[0], robot_joint_init[i]))
 		print('moving back to the original position')
 		for j in range(5):
 				p.resetBasePositionAndOrientation(self.ball_id, ball_pos_init, p.getQuaternionFromEuler(robot_orn_init))
