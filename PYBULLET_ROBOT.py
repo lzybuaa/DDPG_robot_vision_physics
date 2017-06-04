@@ -55,14 +55,14 @@ class PybulletRobot:
 		self.action_high = 500
 
 		# load the two items
-		try:
-			self.robot_id = p.loadURDF(path+'\\kuka_lwr\\kuka.urdf', robot_pos_init, p.getQuaternionFromEuler(robot_orn_init), useFixedBase=True)
-			self.ball_id = p.loadURDF(path+'\\ball\sphere_small.urdf', ball_pos_init)
-			self.ground_id = p.loadURDF(path + "\\floor\plane100.urdf", ground_pos, useFixedBase=True)
-		except:
-			self.robot_id = p.loadURDF(path+'/kuka_lwr/kuka.urdf', robot_pos_init, p.getQuaternionFromEuler(robot_orn_init), useFixedBase=True)
-			self.ball_id = p.loadURDF(path+'/ball/sphere_small.urdf', ball_pos_init)
-			self.ground_id = p.loadURDF(path + "/floor/plane100.urdf", ground_pos, useFixedBase=True)
+		#try:
+			#self.robot_id = p.loadURDF(path+'\\kuka_lwr\\kuka.urdf', robot_pos_init, p.getQuaternionFromEuler(robot_orn_init), useFixedBase=True)
+			#self.ball_id = p.loadURDF(path+'\\ball\sphere_small.urdf', ball_pos_init)
+			#self.ground_id = p.loadURDF(path + "\\floor\plane100.urdf", ground_pos, useFixedBase=True)
+		#except:
+		self.robot_id = p.loadURDF(path+'/kuka_lwr/kuka.urdf', robot_pos_init, p.getQuaternionFromEuler(robot_orn_init), useFixedBase=True)
+		self.ball_id = p.loadURDF(path+'/ball/sphere_small.urdf', ball_pos_init)
+		self.ground_id = p.loadURDF(path + "/floor/plane100.urdf", ground_pos, useFixedBase=True)
 
 		# get the joint number and the initial joint state
 		self.robot_joint_num = p.getNumJoints(self.robot_id)
