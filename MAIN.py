@@ -97,6 +97,7 @@ sess.run(tf.global_variables_initializer())
 var = 1
 
 # start iteration through given number of episodes
+f = open('result.txt','w')
 for i in range(MAX_EPISODES):
     s = pr._reset()
     ep_reward = 0
@@ -127,8 +128,8 @@ for i in range(MAX_EPISODES):
 
         # ending conditions
         if pr._check_collision():
-            print('Episode: %i, Reward: %i, Explore: %.2f' % (i, int(ep_reward), var))
-            print('number of iteration is ',cnt)
+            f.write('Episode: %i, Reward: %i, Explore: %.2f \n' % (i, int(ep_reward), var))
+            f.write('number of iteration is %i \n' % cnt)
             break
 
 

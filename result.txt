@@ -1,66 +1,40 @@
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [ 50.          51.           3.26506662] the reward is: 0.050224
-the next state is: [ 79.         59.          3.1623776] the reward is: 0.060932
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-collison detected, episode again, the reward is: -949.888843 
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [ 79.           3.           4.08117151] the reward is: 0.015324
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [ 63.          67.           3.07328057] the reward is: 0.278991
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-collison detected, episode again, the reward is: -949.705685 
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-the next state is: [-1. -1.  0.] the reward is: -50.000000
-collison detected, episode again, the reward is: -1050.000000 
+Episode: 0, Reward: -1050, Explore: 1.00 
+number of iteration is 21 
+Episode: 1, Reward: -1050, Explore: 1.00 
+number of iteration is 21 
+Episode: 2, Reward: -1050, Explore: 1.00 
+number of iteration is 21 
+Episode: 3, Reward: -999, Explore: 1.00 
+number of iteration is 21 
+Episode: 4, Reward: -1050, Explore: 1.00 
+number of iteration is 21 
+Episode: 5, Reward: -999, Explore: 1.00 
+number of iteration is 21 
+Episode: 6, Reward: -699, Explore: 1.00 
+number of iteration is 21 
+Episode: 7, Reward: -999, Explore: 1.00 
+number of iteration is 21 
+Episode: 8, Reward: -1050, Explore: 1.00 
+number of iteration is 21 
+Episode: 9, Reward: -949, Explore: 1.00 
+number of iteration is 21 
+Episode: 10, Reward: -1050, Explore: 1.00 
+number of iteration is 21 
+Episode: 11, Reward: -999, Explore: 1.00 
+number of iteration is 21 
+Episode: 12, Reward: -1050, Explore: 1.00 
+number of iteration is 21 
+Episode: 13, Reward: -899, Explore: 1.00 
+number of iteration is 21 
+Episode: 14, Reward: -999, Explore: 1.00 
+number of iteration is 21 
+Episode: 15, Reward: -999, Explore: 1.00 
+number of iteration is 21 
+Episode: 16, Reward: -1050, Explore: 1.00 
+number of iteration is 21 
+Episode: 17, Reward: -1050, Explore: 1.00 
+number of iteration is 21 
+Episode: 18, Reward: -1050, Explore: 1.00 
+number of iteration is 21 
+Episode: 19, Reward: -899, Explore: 1.00 
+number of iteration is 21 
