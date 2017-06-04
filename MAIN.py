@@ -60,7 +60,7 @@ elif sys.argv[1] is 'D':
 elif sys.argv[1] is 'G':
     pr = PybulletRobot('GUI',f)
 else:
-    #print('No such mode exist...exit..')
+    print('No such mode exist...exit..')
     exit()
 
 state_dim = pr._state_space_dim()

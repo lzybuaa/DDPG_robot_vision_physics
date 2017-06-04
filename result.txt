@@ -1,43 +1,81 @@
 The center is (64, 64), the radius is 5 
-The center is (62, 72), the radius is 5 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-The center is None, the radius is 0 
-Episode: 0, Reward: -1634, Explore: 1.00 
-number of iteration is 34 
+Episode: 0, Reward: -100, Explore: 1.00 
+number of iteration is 2 
 The center is (64, 64), the radius is 5 
-The center is (71, 68), the radius is 5 
 The center is None, the radius is 0 
+Episode: 1, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
 The center is None, the radius is 0 
+Episode: 2, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
 The center is None, the radius is 0 
+Episode: 3, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
 The center is None, the radius is 0 
+Episode: 4, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+Episode: 5, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+Episode: 6, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+Episode: 7, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+Episode: 8, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+Episode: 9, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is (6, 110), the radius is 7 
+Episode: 10, Reward: 7, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+Episode: 11, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+Episode: 12, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+Episode: 13, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+Episode: 14, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+Episode: 15, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+Episode: 16, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+Episode: 17, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+Episode: 18, Reward: -50, Explore: 1.00 
+number of iteration is 1 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+Episode: 19, Reward: -50, Explore: 1.00 
+number of iteration is 1 

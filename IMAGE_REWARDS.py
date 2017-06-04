@@ -1,6 +1,11 @@
 # imports
 import numpy as np
 import cv2
+import sys
+
+PY3 = sys.version_info[0] == 3
+if PY3:
+    xrange = range
 
 """ CONSTANTS """
 # constant for color range detection of the ball
