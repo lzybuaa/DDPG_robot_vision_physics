@@ -1,139 +1,740 @@
-0 joint gets back to: 0.000000 , the correct value is: 0.000000 
-1 joint gets back to: -0.488000 , the correct value is: -0.488000 
-2 joint gets back to: 0.000000 , the correct value is: 0.000000 
-3 joint gets back to: 0.307000 , the correct value is: 0.307000 
-4 joint gets back to: 0.000000 , the correct value is: 0.000000 
-5 joint gets back to: -0.800000 , the correct value is: -0.800000 
-6 joint gets back to: 0.000000 , the correct value is: 0.000000 
 The center is (64, 64), the radius is 5 
+The center is (37, 32), the radius is 6 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
-Episode: 0, Reward: -150, Explore: 1.00 
-number of iteration is 3 
-0 joint gets back to: 0.000001 , the correct value is: 0.000000 
-1 joint gets back to: -0.488000 , the correct value is: -0.488000 
-2 joint gets back to: 0.000000 , the correct value is: 0.000000 
-3 joint gets back to: 0.307000 , the correct value is: 0.307000 
-4 joint gets back to: -0.000000 , the correct value is: 0.000000 
-5 joint gets back to: -0.800000 , the correct value is: -0.800000 
-6 joint gets back to: 0.000000 , the correct value is: 0.000000 
+The center is (46, 125), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 0, Reward: -1599, Explore: 1.00 
+number of iteration is 34 
 The center is (64, 64), the radius is 5 
+The center is (26, 32), the radius is 6 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
-Episode: 1, Reward: -150, Explore: 1.00 
-number of iteration is 3 
-0 joint gets back to: -0.000000 , the correct value is: 0.000000 
-1 joint gets back to: -0.488000 , the correct value is: -0.488000 
-2 joint gets back to: -0.000000 , the correct value is: 0.000000 
-3 joint gets back to: 0.307000 , the correct value is: 0.307000 
-4 joint gets back to: 0.000000 , the correct value is: 0.000000 
-5 joint gets back to: -0.800000 , the correct value is: -0.800000 
-6 joint gets back to: -0.000000 , the correct value is: 0.000000 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (97, 111), the radius is 9 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 1, Reward: -1599, Explore: 1.00 
+number of iteration is 34 
 The center is (64, 64), the radius is 5 
+The center is (45, 31), the radius is 6 
+The center is (18, 44), the radius is 6 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
-Episode: 2, Reward: -150, Explore: 1.00 
-number of iteration is 3 
-0 joint gets back to: 0.000000 , the correct value is: 0.000000 
-1 joint gets back to: -0.488000 , the correct value is: -0.488000 
-2 joint gets back to: -0.000000 , the correct value is: 0.000000 
-3 joint gets back to: 0.307000 , the correct value is: 0.307000 
-4 joint gets back to: -0.000000 , the correct value is: 0.000000 
-5 joint gets back to: -0.800000 , the correct value is: -0.800000 
-6 joint gets back to: 0.000000 , the correct value is: 0.000000 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (13, 105), the radius is 3 
+The center is (60, 95), the radius is 3 
+The center is (100, 24), the radius is 3 
+The center is (82, 8), the radius is 3 
+The center is (103, 41), the radius is 2 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 2, Reward: -1349, Explore: 1.00 
+number of iteration is 34 
 The center is (64, 64), the radius is 5 
+The center is (57, 20), the radius is 6 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
-Episode: 3, Reward: -150, Explore: 1.00 
-number of iteration is 3 
-0 joint gets back to: 0.000000 , the correct value is: 0.000000 
-1 joint gets back to: -0.488000 , the correct value is: -0.488000 
-2 joint gets back to: 0.000000 , the correct value is: 0.000000 
-3 joint gets back to: 0.307000 , the correct value is: 0.307000 
-4 joint gets back to: 0.000000 , the correct value is: 0.000000 
-5 joint gets back to: -0.800000 , the correct value is: -0.800000 
-6 joint gets back to: -0.000000 , the correct value is: 0.000000 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (27, 15), the radius is 6 
+The center is (44, 12), the radius is 6 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (35, 106), the radius is 6 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 3, Reward: -1499, Explore: 1.00 
+number of iteration is 34 
 The center is (64, 64), the radius is 5 
+The center is (47, 36), the radius is 5 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
-Episode: 4, Reward: -150, Explore: 1.00 
-number of iteration is 3 
-0 joint gets back to: 0.000000 , the correct value is: 0.000000 
-1 joint gets back to: -0.488000 , the correct value is: -0.488000 
-2 joint gets back to: 0.000000 , the correct value is: 0.000000 
-3 joint gets back to: 0.307000 , the correct value is: 0.307000 
-4 joint gets back to: 0.000000 , the correct value is: 0.000000 
-5 joint gets back to: -0.800000 , the correct value is: -0.800000 
-6 joint gets back to: -0.000000 , the correct value is: 0.000000 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (102, 1), the radius is 4 
+The center is (120, 57), the radius is 4 
+The center is (123, 60), the radius is 4 
+The center is (125, 65), the radius is 3 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (89, 97), the radius is 4 
+The center is (24, 114), the radius is 4 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (4, 7), the radius is 5 
+Episode: 4, Reward: -1299, Explore: 1.00 
+number of iteration is 34 
 The center is (64, 64), the radius is 5 
+The center is (68, 25), the radius is 6 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
-Episode: 5, Reward: -150, Explore: 1.00 
-number of iteration is 3 
-0 joint gets back to: 0.000000 , the correct value is: 0.000000 
-1 joint gets back to: -0.488000 , the correct value is: -0.488000 
-2 joint gets back to: 0.000000 , the correct value is: 0.000000 
-3 joint gets back to: 0.307000 , the correct value is: 0.307000 
-4 joint gets back to: 0.000000 , the correct value is: 0.000000 
-5 joint gets back to: -0.800000 , the correct value is: -0.800000 
-6 joint gets back to: 0.000000 , the correct value is: 0.000000 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (122, 82), the radius is 6 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (22, 14), the radius is 5 
+The center is (13, 31), the radius is 4 
+The center is (85, 79), the radius is 3 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 5, Reward: -1449, Explore: 1.00 
+number of iteration is 34 
 The center is (64, 64), the radius is 5 
+The center is (28, 34), the radius is 6 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (63, 112), the radius is 7 
+The center is (89, 45), the radius is 6 
+The center is (73, 19), the radius is 7 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
-Episode: 6, Reward: -150, Explore: 1.00 
-number of iteration is 3 
-0 joint gets back to: -0.000000 , the correct value is: 0.000000 
-1 joint gets back to: -0.488000 , the correct value is: -0.488000 
-2 joint gets back to: -0.000000 , the correct value is: 0.000000 
-3 joint gets back to: 0.307000 , the correct value is: 0.307000 
-4 joint gets back to: 0.000000 , the correct value is: 0.000000 
-5 joint gets back to: -0.800000 , the correct value is: -0.800000 
-6 joint gets back to: 0.000000 , the correct value is: 0.000000 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (1, 101), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 6, Reward: -1449, Explore: 1.00 
+number of iteration is 34 
 The center is (64, 64), the radius is 5 
+The center is (78, 22), the radius is 6 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (3, 79), the radius is 6 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
-Episode: 7, Reward: -150, Explore: 1.00 
-number of iteration is 3 
-0 joint gets back to: 0.000000 , the correct value is: 0.000000 
-1 joint gets back to: -0.488000 , the correct value is: -0.488000 
-2 joint gets back to: 0.000000 , the correct value is: 0.000000 
-3 joint gets back to: 0.307000 , the correct value is: 0.307000 
-4 joint gets back to: 0.000000 , the correct value is: 0.000000 
-5 joint gets back to: -0.800000 , the correct value is: -0.800000 
-6 joint gets back to: -0.000000 , the correct value is: 0.000000 
+The center is (73, 75), the radius is 5 
+The center is (52, 38), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (113, 6), the radius is 4 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (109, 48), the radius is 3 
+The center is (73, 29), the radius is 3 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 7, Reward: -1349, Explore: 1.00 
+number of iteration is 34 
 The center is (64, 64), the radius is 5 
+The center is (30, 32), the radius is 6 
 The center is None, the radius is 0 
-The center is (67, 54), the radius is 2 
 The center is None, the radius is 0 
-Episode: 8, Reward: -99, Explore: 1.00 
-number of iteration is 3 
-0 joint gets back to: 0.000000 , the correct value is: 0.000000 
-1 joint gets back to: -0.488000 , the correct value is: -0.488000 
-2 joint gets back to: -0.000000 , the correct value is: 0.000000 
-3 joint gets back to: 0.307000 , the correct value is: 0.307000 
-4 joint gets back to: -0.000000 , the correct value is: 0.000000 
-5 joint gets back to: -0.800000 , the correct value is: -0.800000 
-6 joint gets back to: 0.000000 , the correct value is: 0.000000 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 8, Reward: -1649, Explore: 1.00 
+number of iteration is 34 
 The center is (64, 64), the radius is 5 
+The center is (47, 61), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (42, 83), the radius is 5 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
 The center is None, the radius is 0 
-Episode: 9, Reward: -150, Explore: 1.00 
-number of iteration is 3 
-0 joint gets back to: 0.000000 , the correct value is: 0.000000 
-1 joint gets back to: -0.488000 , the correct value is: -0.488000 
-2 joint gets back to: 0.000000 , the correct value is: 0.000000 
-3 joint gets back to: 0.307000 , the correct value is: 0.307000 
-4 joint gets back to: 0.000000 , the correct value is: 0.000000 
-5 joint gets back to: -0.800000 , the correct value is: -0.800000 
-6 joint gets back to: 0.000000 , the correct value is: 0.000000 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (122, 9), the radius is 8 
+The center is (109, 9), the radius is 7 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (34, 40), the radius is 5 
+The center is (5, 110), the radius is 6 
+The center is (26, 100), the radius is 5 
+The center is (40, 90), the radius is 4 
+The center is (51, 52), the radius is 4 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (119, 36), the radius is 8 
+The center is (5, 53), the radius is 8 
+The center is None, the radius is 0 
+Episode: 9, Reward: -1149, Explore: 1.00 
+number of iteration is 34 
 The center is (64, 64), the radius is 5 
-The center is (30, 85), the radius is 4 
+The center is (13, 27), the radius is 7 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (30, 101), the radius is 5 
+The center is (63, 112), the radius is 5 
+The center is (12, 117), the radius is 6 
+The center is None, the radius is 0 
+The center is (23, 125), the radius is 4 
+The center is (78, 104), the radius is 3 
+The center is (80, 109), the radius is 3 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 10, Reward: -1349, Explore: 1.00 
+number of iteration is 34 
+The center is (64, 64), the radius is 5 
+The center is (27, 49), the radius is 6 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (17, 1), the radius is 6 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (8, 32), the radius is 8 
+The center is (70, 86), the radius is 6 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (61, 69), the radius is 4 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 11, Reward: -1449, Explore: 1.00 
+number of iteration is 34 
+The center is (64, 64), the radius is 5 
+The center is (13, 29), the radius is 7 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 12, Reward: -1649, Explore: 1.00 
+number of iteration is 34 
+The center is (64, 64), the radius is 5 
+The center is (53, 68), the radius is 5 
+The center is (25, 40), the radius is 6 
+The center is None, the radius is 0 
+The center is (17, 3), the radius is 7 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 2 
+The center is (78, 105), the radius is 7 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (49, 50), the radius is 8 
+The center is (95, 91), the radius is 8 
+The center is (103, 63), the radius is 7 
+The center is (98, 70), the radius is 7 
+The center is (67, 78), the radius is 7 
+The center is (67, 101), the radius is 7 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 13, Reward: -1199, Explore: 1.00 
+number of iteration is 34 
+The center is (64, 64), the radius is 5 
+The center is (75, 23), the radius is 6 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (120, 35), the radius is 4 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 14, Reward: -1599, Explore: 1.00 
+number of iteration is 34 
+The center is (64, 64), the radius is 5 
+The center is (19, 46), the radius is 6 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (116, 3), the radius is 6 
+The center is (52, 111), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (12, 5), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (11, 92), the radius is 3 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 15, Reward: -1449, Explore: 1.00 
+number of iteration is 34 
+The center is (64, 64), the radius is 5 
+The center is (32, 33), the radius is 6 
+The center is None, the radius is 0 
+The center is (23, 44), the radius is 6 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is (126, 68), the radius is 4 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 16, Reward: -1549, Explore: 1.00 
+number of iteration is 34 
+The center is (64, 64), the radius is 5 
+The center is (20, 35), the radius is 6 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 17, Reward: -1649, Explore: 1.00 
+number of iteration is 34 
+The center is (64, 64), the radius is 5 
+The center is (44, 57), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 18, Reward: -1649, Explore: 1.00 
+number of iteration is 34 
+The center is (64, 64), the radius is 5 
+The center is (55, 70), the radius is 5 
+The center is (73, 121), the radius is 6 
+The center is (81, 101), the radius is 6 
+The center is (88, 109), the radius is 6 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 19, Reward: -1499, Explore: 1.00 
+number of iteration is 34 

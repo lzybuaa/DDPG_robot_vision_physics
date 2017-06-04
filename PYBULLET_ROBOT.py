@@ -145,7 +145,7 @@ class PybulletRobot:
 	# step by given action(torque)
 	def _step(self, action):
 		mapped_action = self._map_action(action)
-		for j in range(5):
+		for j in range(3):
 			p.setJointMotorControlArray(self.robot_id,np.arange(self.robot_joint_num),p.TORQUE_CONTROL,forces=mapped_action)
 			if self.mode is 'DIRECT':
 				p.stepSimulation()
