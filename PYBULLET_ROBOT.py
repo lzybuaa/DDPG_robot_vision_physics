@@ -26,6 +26,7 @@ j_d = [0.1,0.1,0.1,0.1,0.1,0.1,0.1]  # joint damping
 XSIZE = 128
 YSIZE = 128
 
+
 class PybulletRobot:
 
 	def __init__(self, mode='DIRECT'):

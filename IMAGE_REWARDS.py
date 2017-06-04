@@ -5,8 +5,8 @@ import cv2
 """ CONSTANTS """
 # constant for color range detection of the ball
 BALL_COLOR = (120, 100, 100)
-greenLower = (29, 86, 6)
-greenUpper = (64, 255, 255)
+greenLower = (28, 86, 6)
+greenUpper = (120, 255, 255)
 # resizing the frame so that we can process it faster
 DOWNSIZE = 128
 TOLERANCE = 20
