@@ -22,7 +22,7 @@ million thanks to the contribution by mofan zhou
 
 """
 
-
+import sys
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 import tensorflow as tf
@@ -51,7 +51,17 @@ BATCH_SIZE = 20
 
 #######################INITIALIZE PYBULLET INSTANCE#########################
 
-pr = PybulletRobot()
+# choose mode based upon user input
+if len(sys.argv) is 1:
+    pr = PybulletRobot()
+elif sys.argv[1] is 'D':
+    pr = PybulletRobot('DIRECT')
+elif sys.argv[1] is 'G':
+    pr = PybulletRobot('GUI')
+else:
+    print('No such mode exist...exit..')
+    exit()
+
 state_dim = pr._state_space_dim()
 action_dim = pr._action_space_dim()
 
@@ -90,11 +100,13 @@ var = 3
 for i in range(MAX_EPISODES):
     s = pr._reset()
     ep_reward = 0
+    cnt  = 0
     while True:
 
         # ending conditions
         if pr._check_collision():
-            print('Episode: %i, Reward: %i, Explore: %.2f\n' % (i, int(ep_reward), var))
+            print('Episode: %i, Reward: %i, Explore: %.2f' % (i, int(ep_reward), var))
+            print('number of iteration is ',cnt)
             break
 
         # Added exploration noise
@@ -117,5 +129,6 @@ for i in range(MAX_EPISODES):
 
         s = s_
         ep_reward += r  # aggregate the episode reward
+        cnt += 1
 
 
