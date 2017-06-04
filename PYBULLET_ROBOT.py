@@ -2,17 +2,27 @@
 This class is written as interface to the pybullet physical environment
 '''
 
+import sys
 import numpy as np
 import pybullet as p
 from IMAGE_REWARDS import *
 import time
 import os
 
+PY3 = sys.version_info[0] == 3
+if PY3:
+    xrange = range
+
 # get the current directory
 path = os.getcwd()
-robot_path = path+'\\kuka_lwr\\kuka.urdf'
-ball_path = path+'\\ball\sphere_small.urdf'
-ground_path = path + "\\floor\plane100.urdf"
+try:
+	robot_path = path+'\\kuka_lwr\\kuka.urdf'
+	ball_path = path+'\\ball\sphere_small.urdf'
+	ground_path = path + "\\floor\plane100.urdf"
+except:
+	robot_path = path+'/kuka_lwr/kuka.urdf'
+	ball_path = path+'/ball/sphere_small.urdf'
+	ground_path = path + "/floor/plane100.urdf"
 
 # pybullet parameters setup
 robot_orn_init = [0,0,0]   # siwei should hardcode this
