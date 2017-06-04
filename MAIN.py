@@ -103,12 +103,6 @@ for i in range(MAX_EPISODES):
     cnt  = 0
     while True:
 
-        # ending conditions
-        if pr._check_collision():
-            print('Episode: %i, Reward: %i, Explore: %.2f' % (i, int(ep_reward), var))
-            print('number of iteration is ',cnt)
-            break
-
         # Added exploration noise
         a = actor.choose_action(s)
         a = np.clip(np.random.normal(a, var), -2, 2)    # add randomness to action selection for exploration
@@ -130,5 +124,11 @@ for i in range(MAX_EPISODES):
         s = s_
         ep_reward += r  # aggregate the episode reward
         cnt += 1
+
+        # ending conditions
+        if pr._check_collision():
+            print('Episode: %i, Reward: %i, Explore: %.2f' % (i, int(ep_reward), var))
+            print('number of iteration is ',cnt)
+            break
 
 

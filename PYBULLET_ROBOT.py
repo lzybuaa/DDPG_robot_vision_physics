@@ -117,10 +117,10 @@ class PybulletRobot:
 
 	# check if ball or robot collides with the ground
 	def _check_collision(self):
-		if len(p.getContactPoints(self.ball_id, self.ground_id)) is 0 or len(p.getContactPoints(self.robot_id, self.ground_id)) is 0:
-			return False
-		else:
+		if len(p.getContactPoints(self.ball_id, self.ground_id)) > 0: #or len(p.getContactPoints(self.robot_id, self.ground_id)) > 0:
 			return True
+		else:
+			return False
 
 	# step by postion
 	def _step_pos(self, position, orientation):
