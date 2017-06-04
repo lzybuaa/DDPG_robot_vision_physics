@@ -15,7 +15,6 @@ if PY3:
 
 # get the current directory
 path = os.getcwd()
-
 robot_path = path+'/kuka_lwr/kuka.urdf'
 ball_path = path+'/ball/sphere_small.urdf'
 ground_path = path + "/floor/plane100.urdf"
@@ -171,3 +170,5 @@ class PybulletRobot:
         projectMatrix = p.computeProjectionMatrixFOV(60, 1, 0.1, 100)     # input: field of view, ratio(width/height),near,far
         rgbpix = p.getCameraImage(XSIZE, YSIZE, viewMatrix, projectMatrix)[2]
         return rgbpix[:, :, 0:3]
+
+
