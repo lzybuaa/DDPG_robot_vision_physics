@@ -1,40 +1,139 @@
-Episode: 0, Reward: -1050, Explore: 1.00 
-number of iteration is 21 
-Episode: 1, Reward: -1050, Explore: 1.00 
-number of iteration is 21 
-Episode: 2, Reward: -1050, Explore: 1.00 
-number of iteration is 21 
-Episode: 3, Reward: -999, Explore: 1.00 
-number of iteration is 21 
-Episode: 4, Reward: -1050, Explore: 1.00 
-number of iteration is 21 
-Episode: 5, Reward: -999, Explore: 1.00 
-number of iteration is 21 
-Episode: 6, Reward: -699, Explore: 1.00 
-number of iteration is 21 
-Episode: 7, Reward: -999, Explore: 1.00 
-number of iteration is 21 
-Episode: 8, Reward: -1050, Explore: 1.00 
-number of iteration is 21 
-Episode: 9, Reward: -949, Explore: 1.00 
-number of iteration is 21 
-Episode: 10, Reward: -1050, Explore: 1.00 
-number of iteration is 21 
-Episode: 11, Reward: -999, Explore: 1.00 
-number of iteration is 21 
-Episode: 12, Reward: -1050, Explore: 1.00 
-number of iteration is 21 
-Episode: 13, Reward: -899, Explore: 1.00 
-number of iteration is 21 
-Episode: 14, Reward: -999, Explore: 1.00 
-number of iteration is 21 
-Episode: 15, Reward: -999, Explore: 1.00 
-number of iteration is 21 
-Episode: 16, Reward: -1050, Explore: 1.00 
-number of iteration is 21 
-Episode: 17, Reward: -1050, Explore: 1.00 
-number of iteration is 21 
-Episode: 18, Reward: -1050, Explore: 1.00 
-number of iteration is 21 
-Episode: 19, Reward: -899, Explore: 1.00 
-number of iteration is 21 
+0 joint gets back to: 0.000000 , the correct value is: 0.000000 
+1 joint gets back to: -0.488000 , the correct value is: -0.488000 
+2 joint gets back to: 0.000000 , the correct value is: 0.000000 
+3 joint gets back to: 0.307000 , the correct value is: 0.307000 
+4 joint gets back to: 0.000000 , the correct value is: 0.000000 
+5 joint gets back to: -0.800000 , the correct value is: -0.800000 
+6 joint gets back to: 0.000000 , the correct value is: 0.000000 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 0, Reward: -150, Explore: 1.00 
+number of iteration is 3 
+0 joint gets back to: 0.000001 , the correct value is: 0.000000 
+1 joint gets back to: -0.488000 , the correct value is: -0.488000 
+2 joint gets back to: 0.000000 , the correct value is: 0.000000 
+3 joint gets back to: 0.307000 , the correct value is: 0.307000 
+4 joint gets back to: -0.000000 , the correct value is: 0.000000 
+5 joint gets back to: -0.800000 , the correct value is: -0.800000 
+6 joint gets back to: 0.000000 , the correct value is: 0.000000 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 1, Reward: -150, Explore: 1.00 
+number of iteration is 3 
+0 joint gets back to: -0.000000 , the correct value is: 0.000000 
+1 joint gets back to: -0.488000 , the correct value is: -0.488000 
+2 joint gets back to: -0.000000 , the correct value is: 0.000000 
+3 joint gets back to: 0.307000 , the correct value is: 0.307000 
+4 joint gets back to: 0.000000 , the correct value is: 0.000000 
+5 joint gets back to: -0.800000 , the correct value is: -0.800000 
+6 joint gets back to: -0.000000 , the correct value is: 0.000000 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 2, Reward: -150, Explore: 1.00 
+number of iteration is 3 
+0 joint gets back to: 0.000000 , the correct value is: 0.000000 
+1 joint gets back to: -0.488000 , the correct value is: -0.488000 
+2 joint gets back to: -0.000000 , the correct value is: 0.000000 
+3 joint gets back to: 0.307000 , the correct value is: 0.307000 
+4 joint gets back to: -0.000000 , the correct value is: 0.000000 
+5 joint gets back to: -0.800000 , the correct value is: -0.800000 
+6 joint gets back to: 0.000000 , the correct value is: 0.000000 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 3, Reward: -150, Explore: 1.00 
+number of iteration is 3 
+0 joint gets back to: 0.000000 , the correct value is: 0.000000 
+1 joint gets back to: -0.488000 , the correct value is: -0.488000 
+2 joint gets back to: 0.000000 , the correct value is: 0.000000 
+3 joint gets back to: 0.307000 , the correct value is: 0.307000 
+4 joint gets back to: 0.000000 , the correct value is: 0.000000 
+5 joint gets back to: -0.800000 , the correct value is: -0.800000 
+6 joint gets back to: -0.000000 , the correct value is: 0.000000 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 4, Reward: -150, Explore: 1.00 
+number of iteration is 3 
+0 joint gets back to: 0.000000 , the correct value is: 0.000000 
+1 joint gets back to: -0.488000 , the correct value is: -0.488000 
+2 joint gets back to: 0.000000 , the correct value is: 0.000000 
+3 joint gets back to: 0.307000 , the correct value is: 0.307000 
+4 joint gets back to: 0.000000 , the correct value is: 0.000000 
+5 joint gets back to: -0.800000 , the correct value is: -0.800000 
+6 joint gets back to: -0.000000 , the correct value is: 0.000000 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 5, Reward: -150, Explore: 1.00 
+number of iteration is 3 
+0 joint gets back to: 0.000000 , the correct value is: 0.000000 
+1 joint gets back to: -0.488000 , the correct value is: -0.488000 
+2 joint gets back to: 0.000000 , the correct value is: 0.000000 
+3 joint gets back to: 0.307000 , the correct value is: 0.307000 
+4 joint gets back to: 0.000000 , the correct value is: 0.000000 
+5 joint gets back to: -0.800000 , the correct value is: -0.800000 
+6 joint gets back to: 0.000000 , the correct value is: 0.000000 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 6, Reward: -150, Explore: 1.00 
+number of iteration is 3 
+0 joint gets back to: -0.000000 , the correct value is: 0.000000 
+1 joint gets back to: -0.488000 , the correct value is: -0.488000 
+2 joint gets back to: -0.000000 , the correct value is: 0.000000 
+3 joint gets back to: 0.307000 , the correct value is: 0.307000 
+4 joint gets back to: 0.000000 , the correct value is: 0.000000 
+5 joint gets back to: -0.800000 , the correct value is: -0.800000 
+6 joint gets back to: 0.000000 , the correct value is: 0.000000 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 7, Reward: -150, Explore: 1.00 
+number of iteration is 3 
+0 joint gets back to: 0.000000 , the correct value is: 0.000000 
+1 joint gets back to: -0.488000 , the correct value is: -0.488000 
+2 joint gets back to: 0.000000 , the correct value is: 0.000000 
+3 joint gets back to: 0.307000 , the correct value is: 0.307000 
+4 joint gets back to: 0.000000 , the correct value is: 0.000000 
+5 joint gets back to: -0.800000 , the correct value is: -0.800000 
+6 joint gets back to: -0.000000 , the correct value is: 0.000000 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+The center is (67, 54), the radius is 2 
+The center is None, the radius is 0 
+Episode: 8, Reward: -99, Explore: 1.00 
+number of iteration is 3 
+0 joint gets back to: 0.000000 , the correct value is: 0.000000 
+1 joint gets back to: -0.488000 , the correct value is: -0.488000 
+2 joint gets back to: -0.000000 , the correct value is: 0.000000 
+3 joint gets back to: 0.307000 , the correct value is: 0.307000 
+4 joint gets back to: -0.000000 , the correct value is: 0.000000 
+5 joint gets back to: -0.800000 , the correct value is: -0.800000 
+6 joint gets back to: 0.000000 , the correct value is: 0.000000 
+The center is (64, 64), the radius is 5 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+The center is None, the radius is 0 
+Episode: 9, Reward: -150, Explore: 1.00 
+number of iteration is 3 
+0 joint gets back to: 0.000000 , the correct value is: 0.000000 
+1 joint gets back to: -0.488000 , the correct value is: -0.488000 
+2 joint gets back to: 0.000000 , the correct value is: 0.000000 
+3 joint gets back to: 0.307000 , the correct value is: 0.307000 
+4 joint gets back to: 0.000000 , the correct value is: 0.000000 
+5 joint gets back to: -0.800000 , the correct value is: -0.800000 
+6 joint gets back to: 0.000000 , the correct value is: 0.000000 
+The center is (64, 64), the radius is 5 
+The center is (30, 85), the radius is 4 

@@ -29,7 +29,7 @@ YSIZE = 128
 
 class PybulletRobot:
 
-	def __init__(self, mode='DIRECT'):
+	def __init__(self, mode='DIRECT', ff=None):
 
 		# state space and action space
 		self.state_space = np.zeros(17) # x, y, radius, velocityx7, toruqex7
@@ -45,6 +45,7 @@ class PybulletRobot:
 		else:
 			p.connect(p.DIRECT)
 		self.mode = mode
+		self.ff = ff
 		p.resetSimulation()
 
 		# action low and high mapped to 1
@@ -78,6 +79,10 @@ class PybulletRobot:
 	def _update_state(self, reset=False):
 		image_frame = self._take_picture()
 		center, radius = compute_center_and_size(image_frame)
+		if self.ff is not None:
+			self.ff.write('The center is %s, the radius is %i \n' %(center, radius))
+		else:
+			print('The center is %s, the radius is %i' %(center, radius))
 		if center is None:
 			center = [-1, -1]
 		res = p.getJointStates(self.robot_id, np.arange(self.robot_joint_num))
@@ -102,17 +107,24 @@ class PybulletRobot:
 		self.action_space = np.zeros(7)
 		#p.setRealTimeSimulation(0)
 		p.setGravity(0,0,0)
-		print('moving back to the original position')
 		# reset the robot's joint states, test resetJointStates
 		for i in range(self.robot_joint_num):
-			p.resetJointState(self.robot_id, i, robot_joint_init[i])
-			if self.mode is 'DIRECT':
-				p.stepSimulation()
+			for j in range(20):
+				p.resetJointState(self.robot_id, i, robot_joint_init[i])
+				if self.mode is 'DIRECT':
+					p.stepSimulation()
+			self.ff.write("%i joint gets back to: %f , the correct value is: %f \n" %(i, p.getJointState(self.robot_id, i)[0], robot_joint_init[i]))
+		print('moving back to the original position')
+		for j in range(5):
+				p.resetBasePositionAndOrientation(self.ball_id, ball_pos_init, p.getQuaternionFromEuler(robot_orn_init))
+				if self.mode is 'DIRECT':
+					p.stepSimulation()
 		print('ball back to the original position')
-		p.resetBasePositionAndOrientation(self.ball_id, ball_pos_init, p.getQuaternionFromEuler(robot_orn_init))
 		# take the picture before ball moves
 		self._update_state(True)  # true = update the init_radius
+		print('here')
 		p.setGravity(0,0,-9.8)
+		time.sleep(0.5)
 		return self.state_space
 
 	# check if ball or robot collides with the ground

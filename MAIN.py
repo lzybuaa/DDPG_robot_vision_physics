@@ -51,13 +51,14 @@ BATCH_SIZE = 20
 
 #######################INITIALIZE PYBULLET INSTANCE#########################
 
+f = open('result.txt','w')
 # choose mode based upon user input
 if len(sys.argv) is 1:
-    pr = PybulletRobot()
+    pr = PybulletRobot(ff=f)
 elif sys.argv[1] is 'D':
-    pr = PybulletRobot('DIRECT')
+    pr = PybulletRobot('DIRECT',f)
 elif sys.argv[1] is 'G':
-    pr = PybulletRobot('GUI')
+    pr = PybulletRobot('GUI',f)
 else:
     print('No such mode exist...exit..')
     exit()
@@ -97,7 +98,6 @@ sess.run(tf.global_variables_initializer())
 var = 1
 
 # start iteration through given number of episodes
-f = open('result.txt','w')
 for i in range(MAX_EPISODES):
     s = pr._reset()
     ep_reward = 0
@@ -106,7 +106,7 @@ for i in range(MAX_EPISODES):
 
         # Added exploration noise
         a = actor.choose_action(s)
-        a = np.clip(np.random.normal(a, var), -1, 1)    # add randomness to action selection for exploration
+        a = np.clip(np.random.normal(a, var), -action_bound, action_bound)    # add randomness to action selection for exploration
         s_, r = pr._step(a)                 # the step (or act) function is predefined in gym (next state and r can be calculated via this)
         M.store_transition(s, a, r / 10, s_)
         if M.pointer > MEMORY_CAPACITY:
