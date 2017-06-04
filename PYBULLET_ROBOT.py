@@ -82,13 +82,13 @@ class PybulletRobot:
 			self.ff.write('The center is %s, the radius is %i \n' %(center, radius))
 		if center is None:
 			center = [-1, -1]
-		res = p.getJointStates(self.robot_id, np.arange(self.robot_joint_num))
 		self.state_space[0:2] = list(center)  # update center - x, y
 		self.state_space[2] = radius          # update radius
 		# update velocity and torque
 		for i in range(self.robot_joint_num):
-			self.state_space[3+i] = res[i][1]
-			self.state_space[10+i] = res[i][3] 
+			res = p.getJointState(self.robot_id, i)
+			self.state_space[3+i] = res[1]
+			self.state_space[10+i] = res[3] 
 		if reset:
 			self.init_radius = radius
 
