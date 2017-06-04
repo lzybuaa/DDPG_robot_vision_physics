@@ -46,7 +46,7 @@ TAU = 0.01  # Soft update for target param, but this is computationally expansiv
 # so we use replace_iter instead
 REPLACE_ITER_A = 500 
 REPLACE_ITER_C = 300
-MEMORY_CAPACITY = 3000
+MEMORY_CAPACITY = 1000
 BATCH_SIZE = 20
 
 #######################INITIALIZE PYBULLET INSTANCE#########################
@@ -94,7 +94,7 @@ actor.add_grad_to_graph(critic.a_grads)
 sess.run(tf.global_variables_initializer())
 
 # control exploration randomness
-var = 3
+var = 1
 
 # start iteration through given number of episodes
 for i in range(MAX_EPISODES):
@@ -105,7 +105,7 @@ for i in range(MAX_EPISODES):
 
         # Added exploration noise
         a = actor.choose_action(s)
-        a = np.clip(np.random.normal(a, var), -2, 2)    # add randomness to action selection for exploration
+        a = np.clip(np.random.normal(a, var), -1, 1)    # add randomness to action selection for exploration
         s_, r = pr._step(a)                 # the step (or act) function is predefined in gym (next state and r can be calculated via this)
         M.store_transition(s, a, r / 10, s_)
         if M.pointer > MEMORY_CAPACITY:
