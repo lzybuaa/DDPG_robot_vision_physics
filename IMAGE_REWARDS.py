@@ -42,8 +42,7 @@ def compute_center_and_size(image_frame):
     # find contours in mask and initialize current center of ball
     cnts = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL,
                             cv2.CHAIN_APPROX_SIMPLE)[-2]
-    center = None
-    radius = 0
+    center, radius = None, 0
 
     # only proceed if at least one contour was found
     if len(cnts) > 0:
@@ -54,7 +53,10 @@ def compute_center_and_size(image_frame):
         ((x, y), radius) = cv2.minEnclosingCircle(c)
         # compute the center by averaging all the points, M["00"] - the # of points, M["m10"] - the aggregate x, M["m01"] - the aggregate y
         M = cv2.moments(c)
-        center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
+        if M["m00"] < 1:
+            center = None
+        else:
+            center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
 
     return center, radius
 
