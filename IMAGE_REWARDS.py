@@ -12,7 +12,7 @@ DOWNSIZE = 128
 TOLERANCE = 20
 
 # for reward function
-WEIGHT = (1, 1)
+WEIGHT = (0.01,0.001)
 NEGATIVE_REWARD = -50
 
 
