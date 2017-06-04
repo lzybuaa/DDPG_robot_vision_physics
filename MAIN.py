@@ -27,7 +27,6 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 import tensorflow as tf
 import numpy as np
-import gym
 from ACTOR import Actor
 from CRITIC import Critic
 from MEMORY import Memory
@@ -38,8 +37,8 @@ tf.set_random_seed(1)
 
  ####################   SET UP PARAMETERS ##################################
 
-MAX_EPISODES = 70
-MAX_EP_STEPS = 400
+MAX_EPISODES = 20
+#MAX_EP_STEPS = 400
 LR_A = 0.01  # learning rate for actor
 LR_C = 0.01  # learning rate for critic
 GAMMA = 0.9  # reward discount
@@ -53,8 +52,8 @@ BATCH_SIZE = 20
 #######################INITIALIZE PYBULLET INSTANCE#########################
 
 pr = PybulletRobot()
-state_dim = pr._state_space.shape[0]
-action_dim = pr._action_space.shape[0]
+state_dim = pr._state_space_dim()
+action_dim = pr._action_space_dim()
 
 ######################  SETUP TENSORFLOW  ##################################
 
@@ -91,21 +90,18 @@ var = 3
 for i in range(MAX_EPISODES):
     s = pr._reset()
     ep_reward = 0
-
     while True:
 
-    	# ending conditions
-    	if pr._check_collision():
-    		print('Episode:', i, ' Reward: %i' % int(ep_reward), 'Explore: %.2f' % var, )
-    		break
+        # ending conditions
+        if pr._check_collision():
+            print('Episode: %i, Reward: %i, Explore: %.2f\n' % (i, int(ep_reward), var))
+            break
 
         # Added exploration noise
         a = actor.choose_action(s)
         a = np.clip(np.random.normal(a, var), -2, 2)    # add randomness to action selection for exploration
         s_, r = pr._step(a)                 # the step (or act) function is predefined in gym (next state and r can be calculated via this)
-
         M.store_transition(s, a, r / 10, s_)
-
         if M.pointer > MEMORY_CAPACITY:
             var *= .9995    # decay the action randomness
             b_M = M.sample(BATCH_SIZE)

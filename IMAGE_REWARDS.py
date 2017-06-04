@@ -30,7 +30,6 @@ def compute_center_and_size(image_frame):
     # preprocessing
     # we won't downsize, since the image is modifyable already
     # image_frame = imutils.resize(image_frame, width=DOWNSIZE)
-    dims = image_frame.shape
     hsv = cv2.cvtColor(image_frame, cv2.COLOR_BGR2HSV)
 
     # mask
@@ -53,25 +52,22 @@ def compute_center_and_size(image_frame):
         # centroid
         c = max(cnts, key=cv2.contourArea)
         ((x, y), radius) = cv2.minEnclosingCircle(c)
-        center = (x, y)
+        # compute the center by averaging all the points, M["00"] - the # of points, M["m10"] - the aggregate x, M["m01"] - the aggregate y
+        M = cv2.moments(c)
+        center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
 
-        # idk what this next line does...
-        # M = cv2.moments(c)
-        # center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
-
-    return center, radius, dims[0:2]
+    return center, radius
 
 
-def compute_reward(image_frame, initial_radius):
+def compute_reward(center, radius, XSIZE, YSIZE, initial_radius):
     """ simple reward computation function
     :param image_frame: one image frame rgb matrix to get reward function for
     :param initial_radius: the initial radius of the first frame
     :return:
     """
-    (center, radius, dims) = compute_center_and_size(image_frame)
-    img_center = np.array(dims)/2
+    img_center = np.array([XSIZE, YSIZE])/2
 
-    if radius is 0 or center is None:
+    if round(radius) is 0 or center[0] < 0 :
         return NEGATIVE_REWARD
 
     # super simple reward function = radius - weight * (abs(xdiff) + abs(ydiff))
@@ -79,7 +75,7 @@ def compute_reward(image_frame, initial_radius):
     radius = radius - delta_rad
 
     diff = np.linalg.norm(img_center - np.array(center))
-    x = WEIGHT[1]*radius + WEIGHT[2]*diff
+    x = WEIGHT[0]*radius + WEIGHT[1]*diff
     reward = 1/x
 
     return reward
