@@ -135,10 +135,10 @@ for i in range(int(MAX_EPISODES/50)):
             print('episode %i' % cnt_epi)
 
     saver = tf.train.Saver() # save every vector
-    saver.save(actor.sess, "/actor.ckpt", global_step=(i+1)*50)
-    saver.save(critic.sess, "/critic.ckpt", global_step=(i+1)*50)
-        #saver.restore(actor.sess, "/actor.ckpt")
-        #saver.restore(critic.sess, "/critic.ckpt")
+    saver.save(actor.sess, "./actor.ckpt", global_step=(i+1)*50)
+    saver.save(critic.sess, "./critic.ckpt", global_step=(i+1)*50)
+        #saver.restore(actor.sess, "./actor.ckpt")
+        #saver.restore(critic.sess, "./critic.ckpt")
         
 
 
