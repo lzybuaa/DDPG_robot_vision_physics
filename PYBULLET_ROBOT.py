@@ -74,7 +74,6 @@ class PybulletRobot:
 
     # update the state spacex17
     def _update_state(self, reset=False):
-        print('update state')
         image_frame = self._take_picture()
         center, radius = compute_center_and_size(image_frame)
         if self.ff is not None:
@@ -141,7 +140,6 @@ class PybulletRobot:
                 p.stepSimulation()
             time.sleep(0.001)  # naive computation
         # update the state
-        print(p.getLinkState(self.robot_id, 6)[0:2])
         self._update_state()
         # compute the reward
         r = compute_reward(self.state_space[0:2], self.state_space[2], XSIZE, YSIZE, self.init_radius)
