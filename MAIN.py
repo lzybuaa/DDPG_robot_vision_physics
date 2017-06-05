@@ -37,7 +37,7 @@ tf.set_random_seed(1)
 
  ####################   SET UP PARAMETERS ##################################
 
-MAX_EPISODES = 1000
+MAX_EPISODES = 10000
 #MAX_EP_STEPS = 400
 LR_A = 0.01  # learning rate for actor
 LR_C = 0.01  # learning rate for critic
@@ -48,7 +48,6 @@ REPLACE_ITER_A = 500
 REPLACE_ITER_C = 300
 MEMORY_CAPACITY = 1000
 BATCH_SIZE = 20
-
 #######################INITIALIZE PYBULLET INSTANCE#########################
 
 f = open('result.txt','w')
@@ -93,48 +92,52 @@ actor.add_grad_to_graph(critic.a_grads)
 
 # initialize global variable
 sess.run(tf.global_variables_initializer())
-
+cnt_epi = 0
 # control exploration randomness
 var = 1
-
 # start iteration through given number of episodes
-cnt_epi = 0
-for i in range(MAX_EPISODES):
+for i in range(int(MAX_EPISODES/50)):
     s = pr._reset()
     ep_reward = 0
     cnt  = 0
-    while True:
+    for j in range(50):
+        while True:
+            saver = tf.train.Saver() # save every vector
+            # Added exploration noise
+            a = actor.choose_action(s)
+            a = np.clip(np.random.normal(a, var), -action_bound, action_bound)    # add randomness to action selection for exploration
+            s_, r = pr._step(a)                 # the step (or act) function is predefined in gym (next state and r can be calculated via this)
+            M.store_transition(s, a, r / 10, s_)
+            if M.pointer > MEMORY_CAPACITY:
+                var *= .9995    # decay the action randomness
+                b_M = M.sample(BATCH_SIZE)
+                #  the sequence in sample matrix is state, action, reward, state_
+                b_s = b_M[:, :state_dim]
+                b_a = b_M[:, state_dim: state_dim + action_dim]
+                b_r = b_M[:, -state_dim - 1: -state_dim]
+                b_s_ = b_M[:, -state_dim:]
 
-        # Added exploration noise
-        a = actor.choose_action(s)
-        a = np.clip(np.random.normal(a, var), -action_bound, action_bound)    # add randomness to action selection for exploration
-        s_, r = pr._step(a)                 # the step (or act) function is predefined in gym (next state and r can be calculated via this)
-        M.store_transition(s, a, r / 10, s_)
-        if M.pointer > MEMORY_CAPACITY:
-            var *= .9995    # decay the action randomness
-            b_M = M.sample(BATCH_SIZE)
-            #  the sequence in sample matrix is state, action, reward, state_
-            b_s = b_M[:, :state_dim]
-            b_a = b_M[:, state_dim: state_dim + action_dim]
-            b_r = b_M[:, -state_dim - 1: -state_dim]
-            b_s_ = b_M[:, -state_dim:]
+                # learn from the batch
+                critic.learn(b_s, b_a, b_r, b_s_)
+                actor.learn(b_s, b_a)
 
-            # learn from the batch
-            critic.learn(b_s, b_a, b_r, b_s_)
-            actor.learn(b_s, b_a)
+            s = s_
+            ep_reward += r  # aggregate the episode reward
+            cnt += 1
 
-        s = s_
-        ep_reward += r  # aggregate the episode reward
-        cnt += 1
+            # ending conditions
+            if pr._check_collision():
+                f.write('Episode: %i, Reward: %i, Explore: %.2f \n' % (i, int(ep_reward), var))
+                f.write('number of iteration is %i \n' % cnt)
+                print(int(ep_reward))
+                break
+            cnt_epi += 1
+            print('episode %i' % cnt_epi)
+                
+        saver.save(actor.sess, "/actor.ckpt")
+        saver.save(critic.sess, "/critic.ckpt")
+        #saver.restore(actor.sess, "/model.ckpt")
+        
 
-
-        # ending conditions
-        if pr._check_collision():
-            f.write('Episode: %i, Reward: %i, Explore: %.2f \n' % (i, int(ep_reward), var))
-            f.write('number of iteration is %i \n' % cnt)
-            break
-
-    cnt_epi += 1
-    print('episode %i' % cnt_epi)
 
 
