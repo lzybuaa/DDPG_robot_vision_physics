@@ -127,7 +127,7 @@ for i in range(int(MAX_EPISODES/50)):
 
             # ending conditions
             if pr._check_collision():
-                f.write('Episode: %i, Reward: %i, Explore: %.2f \n' % (i*(j+1), int(ep_reward), var))
+                f.write('Episode: %i, Reward: %i, Explore: %.2f \n' % ((i+1)*(j+1), int(ep_reward), var))
                 f.write('number of iteration is %i \n' % cnt)
                 print(int(ep_reward))
                 break
@@ -135,8 +135,8 @@ for i in range(int(MAX_EPISODES/50)):
             print('episode %i' % cnt_epi)
 
     saver = tf.train.Saver() # save every vector
-    saver.save(actor.sess, "/actor.ckpt", global_step=i*50)
-    saver.save(critic.sess, "/critic.ckpt", global_step=i*50)
+    saver.save(actor.sess, "/actor.ckpt", global_step=(i+1)*50)
+    saver.save(critic.sess, "/critic.ckpt", global_step=(i+1)*50)
         #saver.restore(actor.sess, "/actor.ckpt")
         #saver.restore(critic.sess, "/critic.ckpt")
         
