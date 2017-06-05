@@ -37,7 +37,7 @@ tf.set_random_seed(1)
 
  ####################   SET UP PARAMETERS ##################################
 
-MAX_EPISODES = 20
+MAX_EPISODES = 1000
 #MAX_EP_STEPS = 400
 LR_A = 0.01  # learning rate for actor
 LR_C = 0.01  # learning rate for critic
@@ -98,6 +98,7 @@ sess.run(tf.global_variables_initializer())
 var = 1
 
 # start iteration through given number of episodes
+cnt_epi = 0
 for i in range(MAX_EPISODES):
     s = pr._reset()
     ep_reward = 0
@@ -126,10 +127,14 @@ for i in range(MAX_EPISODES):
         ep_reward += r  # aggregate the episode reward
         cnt += 1
 
+
         # ending conditions
         if pr._check_collision():
             f.write('Episode: %i, Reward: %i, Explore: %.2f \n' % (i, int(ep_reward), var))
             f.write('number of iteration is %i \n' % cnt)
             break
+
+    cnt_epi += 1
+    print('episode %i' % cnt_epi)
 
 
