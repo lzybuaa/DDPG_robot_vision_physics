@@ -168,8 +168,9 @@ class PybulletRobot:
         print(tagPos)
         #p.removeBody(kukaId)
         viewMatrix = p.computeViewMatrix(Pos, tagPos, (0, 0, 1))
-        #viewMatrix=p.computeViewMatrix([-2, 0, 2], [0, 0, 1],[0, 0, 1])
+        viewMatrix = [round(elem, 2) for elem in viewMatrix]
         projectMatrix = p.computeProjectionMatrixFOV(60, 1, 0.1, 100)     # input: field of view, ratio(width/height),near,far
+        projectMatrix = [round(elem, 2) for elem in projectMatrix]
         rgbpix = p.getCameraImage(XSIZE, YSIZE, viewMatrix, projectMatrix)[2]
         return rgbpix[:, :, 0:3]
 
