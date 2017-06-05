@@ -74,7 +74,6 @@ class PybulletRobot:
 
     # update the state spacex17
     def _update_state(self, reset=False):
-        print('update state')
         image_frame = self._take_picture()
         center, radius = compute_center_and_size(image_frame)
         if self.ff is not None:
@@ -95,7 +94,6 @@ class PybulletRobot:
 
     # maps (-1, 0) to (-500, -200), (0, 1) to (200, 500)
     def _map_action(self, action):
-        print('map action')
         c_action = np.clip(action, -1, 1)
         return self.action_low * np.sign(c_action) + (self.action_high - self.action_low) * np.array(c_action)
 
@@ -127,7 +125,6 @@ class PybulletRobot:
 
     # check if ball or robot collides with the ground
     def _check_collision(self):
-        print('check collision')
         if len(p.getContactPoints(self.ball_id, self.ground_id)) > 0: #or len(p.getContactPoints(self.robot_id, self.ground_id)) > 0:
             return True
         else:
@@ -135,7 +132,6 @@ class PybulletRobot:
 
     # step by given action(torque)
     def _step(self, action):
-        print('step')
         mapped_action = self._map_action(action)
         for i in range(3):
             for j in range(self.robot_joint_num-1):
@@ -144,7 +140,6 @@ class PybulletRobot:
                 p.stepSimulation()
             time.sleep(0.001)  # naive computation
         # update the state
-        print(p.getLinkState(self.robot_id, 6)[0:2])
         self._update_state()
         # compute the reward
         r = compute_reward(self.state_space[0:2], self.state_space[2], XSIZE, YSIZE, self.init_radius)
@@ -153,7 +148,6 @@ class PybulletRobot:
 
     # perform taking pictures
     def _take_picture(self):
-        print('take picture')
         # get the last link's position and orientation
         Pos, Orn = p.getLinkState(self.robot_id, self.robot_joint_num-1)[:2]
         # Pos is the position of end effect, orn is the orientation of the end effect
@@ -165,7 +159,6 @@ class PybulletRobot:
         for i in range(3):
             camview.append(np.dot(rotmatrix[i*3:i*3+3], (0, 0, distance)))
         tagPos = np.add(camview,Pos)
-        print(tagPos)
         #p.removeBody(kukaId)
         viewMatrix = p.computeViewMatrix(Pos, tagPos, (0, 0, 1))
         viewMatrix = [round(elem, 2) for elem in viewMatrix]
