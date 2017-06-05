@@ -119,7 +119,7 @@ class PybulletRobot:
         print('ball back to the original position')
         # take the picture before ball moves
         self._update_state(True)  # true = update the init_radius
-        p.setGravity(0,0,-9.8)
+        p.setGravity(0,0,-0.01)
         time.sleep(0.5)
         return self.state_space
 
@@ -134,8 +134,8 @@ class PybulletRobot:
     def _step(self, action):
         mapped_action = self._map_action(action)
         for i in range(3):
-            for j in range(self.robot_joint_num-1):
-                p.setJointMotorControl2(self.robot_id,j+1,p.TORQUE_CONTROL,force=mapped_action[j+1])
+            for j in range(1, self.robot_joint_num-1):
+                p.setJointMotorControl2(self.robot_id,j,p.TORQUE_CONTROL,force=mapped_action[j+1])
             if self.mode is 'DIRECT':
                 p.stepSimulation()
             time.sleep(0.001)  # naive computation

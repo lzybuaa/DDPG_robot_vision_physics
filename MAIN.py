@@ -139,10 +139,10 @@ for i in range(int(MAX_EPISODES/50)):
         cnt_epi += 1
         print('episode %i' % cnt_epi)
 
-    savera = tf.train.Saver() # save every vector
-    saverc = tf.train.Saver() # save every vector
-    savera.save(actor.sess, "./actor_checkpoint/actor")
-    saverc.save(critic.sess, "./critic_checkpoint/critic")
+    #savera = tf.train.Saver() # save every vector
+    #saverc = tf.train.Saver() # save every vector
+    #savera.save(actor.sess, "./actor_checkpoint/actor")
+    #saverc.save(critic.sess, "./critic_checkpoint/critic")
         
 
 
