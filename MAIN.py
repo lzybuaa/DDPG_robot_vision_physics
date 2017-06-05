@@ -96,6 +96,11 @@ cnt_epi = 0
 # control exploration randomness
 var = 1
 
+#savera = tf.train.import_meta_graph('./actor_checkpoint/actor.meta')
+#saverc = tf.train.import_meta_graph('./critic_checkpoint/critic.meta')
+#savera.restore(actor.sess, tf.train.latest_checkpoint('./actor_checkpoint'))
+#saverc.restore(critic.sess, tf.train.latest_checkpoint('./critic_checkpoint'))
+
 # start iteration through given number of episodes
 for i in range(int(MAX_EPISODES/50)):
     for j in range(50):
@@ -134,11 +139,10 @@ for i in range(int(MAX_EPISODES/50)):
         cnt_epi += 1
         print('episode %i' % cnt_epi)
 
-    saver = tf.train.Saver() # save every vector
-    saver.save(actor.sess, "./actor_checkpoint/actor", global_step=(i+1)*50)
-    saver.save(critic.sess, "./critic_checkpoint/critic", global_step=(i+1)*50)
-    #saver.restore(actor.sess, tf.train.latest_checkpoint('./actor_checkpoint'))
-    #saver.restore(critic.sess, tf.train.latest_checkpoint('./critic_checkpoint'))
+    savera = tf.train.Saver() # save every vector
+    saverc = tf.train.Saver() # save every vector
+    savera.save(actor.sess, "./actor_checkpoint/actor")
+    saverc.save(critic.sess, "./critic_checkpoint/critic")
         
 
 
