@@ -95,14 +95,14 @@ sess.run(tf.global_variables_initializer())
 cnt_epi = 0
 # control exploration randomness
 var = 1
+
 # start iteration through given number of episodes
 for i in range(int(MAX_EPISODES/50)):
-    s = pr._reset()
-    ep_reward = 0
-    cnt  = 0
     for j in range(50):
+        s = pr._reset()
+        ep_reward = 0
+        cnt  = 0
         while True:
-            saver = tf.train.Saver() # save every vector
             # Added exploration noise
             a = actor.choose_action(s)
             a = np.clip(np.random.normal(a, var), -action_bound, action_bound)    # add randomness to action selection for exploration
@@ -127,16 +127,18 @@ for i in range(int(MAX_EPISODES/50)):
 
             # ending conditions
             if pr._check_collision():
-                f.write('Episode: %i, Reward: %i, Explore: %.2f \n' % (i, int(ep_reward), var))
+                f.write('Episode: %i, Reward: %i, Explore: %.2f \n' % (i*(j+1), int(ep_reward), var))
                 f.write('number of iteration is %i \n' % cnt)
                 print(int(ep_reward))
                 break
             cnt_epi += 1
             print('episode %i' % cnt_epi)
-                
-        saver.save(actor.sess, "/actor.ckpt")
-        saver.save(critic.sess, "/critic.ckpt")
-        #saver.restore(actor.sess, "/model.ckpt")
+
+    saver = tf.train.Saver() # save every vector
+    saver.save(actor.sess, "/actor.ckpt", global_step=i*50)
+    saver.save(critic.sess, "/critic.ckpt", global_step=i*50)
+        #saver.restore(actor.sess, "/actor.ckpt")
+        #saver.restore(critic.sess, "/critic.ckpt")
         
 
 
