@@ -79,10 +79,9 @@ def compute_reward(center, radius, XSIZE, YSIZE, initial_radius):
 
     # super simple reward function = radius - weight * (abs(xdiff) + abs(ydiff))
     delta_rad = abs(radius - initial_radius)
-    radius = radius - delta_rad
 
     diff = np.linalg.norm(img_center - np.array(center))
-    x = WEIGHT[0]*radius + WEIGHT[1]*diff
+    x = WEIGHT[0]*delta_rad + WEIGHT[1]*diff
     reward = 1/x
 
     return reward

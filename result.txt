@@ -1,0 +1,1058 @@
+The center is (64, 65), the radius is 5 
+The center is (51, 106), the radius is 6 
+The center is None, the radius is 0 
+Episode: 1, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (65, 29), the radius is 6 
+The center is None, the radius is 0 
+Episode: 2, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (37, 51), the radius is 6 
+The center is None, the radius is 0 
+Episode: 3, Reward: -38, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (58, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 4, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (77, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 5, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (68, 76), the radius is 5 
+The center is None, the radius is 0 
+Episode: 6, Reward: -35, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (62, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 7, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (77, 25), the radius is 6 
+The center is (106, 44), the radius is 6 
+The center is None, the radius is 0 
+Episode: 8, Reward: -30, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (70, 105), the radius is 6 
+The center is (58, 104), the radius is 6 
+The center is (39, 105), the radius is 6 
+The center is None, the radius is 0 
+Episode: 9, Reward: -20, Explore: 2.00 
+number of iteration is 4 
+The center is (64, 65), the radius is 5 
+The center is (58, 108), the radius is 6 
+The center is None, the radius is 0 
+Episode: 10, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (69, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 11, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (65, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 12, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (78, 21), the radius is 6 
+The center is None, the radius is 0 
+Episode: 13, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 14, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (78, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 15, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (38, 55), the radius is 5 
+The center is None, the radius is 0 
+Episode: 16, Reward: -38, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (67, 82), the radius is 5 
+The center is None, the radius is 0 
+Episode: 17, Reward: -36, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (65, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 18, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (51, 105), the radius is 6 
+The center is None, the radius is 0 
+Episode: 19, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (52, 48), the radius is 5 
+The center is (47, 74), the radius is 5 
+The center is None, the radius is 0 
+Episode: 20, Reward: -23, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (52, 100), the radius is 6 
+The center is (33, 92), the radius is 6 
+The center is (33, 72), the radius is 6 
+The center is (39, 83), the radius is 6 
+The center is (9, 94), the radius is 7 
+The center is None, the radius is 0 
+Episode: 21, Reward: 1, Explore: 2.00 
+number of iteration is 6 
+The center is (64, 65), the radius is 5 
+The center is (69, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 22, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (54, 104), the radius is 6 
+The center is (48, 109), the radius is 6 
+The center is (62, 102), the radius is 6 
+The center is None, the radius is 0 
+Episode: 23, Reward: -19, Explore: 2.00 
+number of iteration is 4 
+The center is (64, 65), the radius is 5 
+The center is (78, 106), the radius is 6 
+The center is None, the radius is 0 
+Episode: 24, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (77, 110), the radius is 6 
+The center is None, the radius is 0 
+Episode: 25, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (45, 64), the radius is 5 
+The center is (41, 96), the radius is 6 
+The center is None, the radius is 0 
+Episode: 26, Reward: -26, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (48, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 27, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (30, 28), the radius is 6 
+The center is (3, 40), the radius is 6 
+The center is None, the radius is 2 
+Episode: 28, Reward: -32, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (37, 47), the radius is 6 
+The center is None, the radius is 0 
+Episode: 29, Reward: -38, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 30, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (61, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 31, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (58, 108), the radius is 6 
+The center is None, the radius is 0 
+Episode: 32, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (31, 23), the radius is 6 
+The center is None, the radius is 0 
+Episode: 33, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 34, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (79, 110), the radius is 6 
+The center is None, the radius is 0 
+Episode: 35, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (58, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 36, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (56, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 37, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (32, 30), the radius is 6 
+The center is None, the radius is 0 
+Episode: 38, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 39, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (61, 56), the radius is 5 
+The center is (51, 95), the radius is 6 
+The center is None, the radius is 0 
+Episode: 40, Reward: -23, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (58, 108), the radius is 6 
+The center is None, the radius is 0 
+Episode: 41, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 42, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (61, 21), the radius is 6 
+The center is None, the radius is 0 
+Episode: 43, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (67, 63), the radius is 5 
+The center is (83, 8), the radius is 7 
+The center is (104, 16), the radius is 7 
+The center is (64, 50), the radius is 5 
+The center is (74, 86), the radius is 5 
+The center is None, the radius is 0 
+Episode: 44, Reward: 11, Explore: 2.00 
+number of iteration is 6 
+The center is (64, 65), the radius is 5 
+The center is (51, 110), the radius is 6 
+The center is None, the radius is 0 
+Episode: 45, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (75, 48), the radius is 5 
+The center is None, the radius is 0 
+Episode: 46, Reward: -36, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (42, 72), the radius is 5 
+The center is (22, 65), the radius is 6 
+The center is (36, 54), the radius is 5 
+The center is (56, 62), the radius is 5 
+The center is None, the radius is 0 
+Episode: 47, Reward: 0, Explore: 2.00 
+number of iteration is 5 
+The center is (64, 65), the radius is 5 
+The center is (70, 99), the radius is 6 
+The center is (65, 120), the radius is 6 
+The center is (5, 117), the radius is 8 
+The center is None, the radius is 0 
+Episode: 48, Reward: -22, Explore: 2.00 
+number of iteration is 4 
+The center is (64, 65), the radius is 5 
+The center is (61, 106), the radius is 6 
+The center is None, the radius is 0 
+Episode: 49, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (59, 37), the radius is 5 
+The center is (76, 21), the radius is 6 
+The center is (93, 38), the radius is 6 
+The center is (103, 15), the radius is 7 
+The center is (91, 75), the radius is 5 
+The center is (89, 122), the radius is 7 
+The center is (79, 117), the radius is 6 
+The center is (82, 123), the radius is 6 
+The center is None, the radius is 0 
+Episode: 50, Reward: 27, Explore: 2.00 
+number of iteration is 9 
+The center is (64, 65), the radius is 5 
+The center is (85, 74), the radius is 5 
+The center is None, the radius is 0 
+Episode: 2, Reward: -37, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (79, 112), the radius is 6 
+The center is None, the radius is 0 
+Episode: 4, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (58, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 6, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (70, 108), the radius is 6 
+The center is None, the radius is 0 
+Episode: 8, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (50, 110), the radius is 6 
+The center is None, the radius is 0 
+Episode: 10, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (54, 83), the radius is 5 
+The center is None, the radius is 0 
+Episode: 12, Reward: -37, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (59, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 14, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 16, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (41, 67), the radius is 5 
+The center is (16, 73), the radius is 6 
+The center is (92, 121), the radius is 6 
+The center is None, the radius is 0 
+Episode: 18, Reward: -19, Explore: 2.00 
+number of iteration is 4 
+The center is (64, 65), the radius is 5 
+The center is (92, 34), the radius is 6 
+The center is None, the radius is 0 
+Episode: 20, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (46, 95), the radius is 6 
+The center is None, the radius is 0 
+Episode: 22, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (79, 110), the radius is 6 
+The center is None, the radius is 0 
+Episode: 24, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (59, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 26, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (54, 86), the radius is 5 
+The center is None, the radius is 0 
+Episode: 28, Reward: -37, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (49, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 30, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (58, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 32, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (42, 66), the radius is 5 
+The center is None, the radius is 0 
+Episode: 34, Reward: -37, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (69, 44), the radius is 5 
+The center is None, the radius is 0 
+Episode: 36, Reward: -37, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (45, 71), the radius is 5 
+The center is (39, 126), the radius is 4 
+The center is None, the radius is 0 
+Episode: 38, Reward: -27, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (40, 59), the radius is 5 
+The center is None, the radius is 0 
+Episode: 40, Reward: -37, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (53, 102), the radius is 6 
+The center is (54, 118), the radius is 7 
+The center is None, the radius is 0 
+Episode: 42, Reward: -30, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (56, 98), the radius is 6 
+The center is None, the radius is 0 
+Episode: 44, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (79, 112), the radius is 6 
+The center is None, the radius is 0 
+Episode: 46, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (70, 105), the radius is 6 
+The center is None, the radius is 0 
+Episode: 48, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (50, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 50, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (34, 22), the radius is 6 
+The center is None, the radius is 0 
+Episode: 52, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (60, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 54, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (57, 108), the radius is 6 
+The center is None, the radius is 0 
+Episode: 56, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (57, 66), the radius is 5 
+The center is (44, 90), the radius is 6 
+The center is None, the radius is 0 
+Episode: 58, Reward: -23, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (58, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 60, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (61, 68), the radius is 5 
+The center is (77, 123), the radius is 6 
+The center is None, the radius is 0 
+Episode: 62, Reward: -25, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (40, 56), the radius is 5 
+The center is (7, 35), the radius is 7 
+The center is (95, 45), the radius is 5 
+The center is None, the radius is 0 
+Episode: 64, Reward: -18, Explore: 2.00 
+number of iteration is 4 
+The center is (64, 65), the radius is 5 
+The center is (58, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 66, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (58, 110), the radius is 6 
+The center is None, the radius is 0 
+Episode: 68, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (78, 100), the radius is 6 
+The center is (103, 89), the radius is 6 
+The center is (99, 60), the radius is 6 
+The center is (86, 61), the radius is 6 
+The center is None, the radius is 0 
+Episode: 70, Reward: -6, Explore: 2.00 
+number of iteration is 5 
+The center is (64, 65), the radius is 5 
+The center is (72, 103), the radius is 6 
+The center is None, the radius is 0 
+Episode: 72, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (67, 19), the radius is 6 
+The center is None, the radius is 0 
+Episode: 74, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (61, 57), the radius is 5 
+The center is (83, 68), the radius is 5 
+The center is (102, 72), the radius is 6 
+The center is (103, 54), the radius is 6 
+The center is (104, 39), the radius is 6 
+The center is (77, 25), the radius is 6 
+The center is None, the radius is 0 
+Episode: 76, Reward: 19, Explore: 2.00 
+number of iteration is 7 
+The center is (64, 65), the radius is 5 
+The center is (48, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 78, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (69, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 80, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (63, 27), the radius is 6 
+The center is (31, 36), the radius is 6 
+The center is None, the radius is 0 
+Episode: 82, Reward: -29, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (61, 51), the radius is 5 
+The center is (67, 3), the radius is 6 
+The center is None, the radius is 0 
+Episode: 84, Reward: -27, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (30, 32), the radius is 6 
+The center is None, the radius is 0 
+Episode: 86, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (54, 105), the radius is 6 
+The center is None, the radius is 0 
+Episode: 88, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (31, 23), the radius is 6 
+The center is (0, 7), the radius is 5 
+The center is (72, 11), the radius is 6 
+The center is None, the radius is 0 
+Episode: 90, Reward: -24, Explore: 2.00 
+number of iteration is 4 
+The center is (64, 65), the radius is 5 
+The center is (67, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 92, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (94, 36), the radius is 6 
+The center is None, the radius is 0 
+Episode: 94, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (67, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 96, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (45, 74), the radius is 5 
+The center is None, the radius is 0 
+Episode: 98, Reward: -37, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (70, 106), the radius is 6 
+The center is (55, 125), the radius is 5 
+The center is (47, 105), the radius is 6 
+The center is (43, 103), the radius is 6 
+The center is (39, 90), the radius is 6 
+The center is (33, 121), the radius is 7 
+The center is None, the radius is 0 
+Episode: 100, Reward: 7, Explore: 2.00 
+number of iteration is 7 
+The center is (64, 65), the radius is 5 
+The center is (53, 100), the radius is 6 
+The center is None, the radius is 0 
+Episode: 3, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (77, 103), the radius is 6 
+The center is None, the radius is 0 
+Episode: 6, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (47, 56), the radius is 5 
+The center is (34, 77), the radius is 5 
+The center is (75, 76), the radius is 5 
+The center is (116, 60), the radius is 7 
+The center is None, the radius is 0 
+Episode: 9, Reward: -2, Explore: 2.00 
+number of iteration is 5 
+The center is (64, 65), the radius is 5 
+The center is (64, 98), the radius is 6 
+The center is None, the radius is 0 
+Episode: 12, Reward: -38, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (55, 95), the radius is 6 
+The center is None, the radius is 0 
+Episode: 15, Reward: -38, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (40, 62), the radius is 5 
+The center is (19, 108), the radius is 7 
+The center is (48, 115), the radius is 7 
+The center is (49, 23), the radius is 6 
+The center is None, the radius is 0 
+Episode: 18, Reward: -10, Explore: 2.00 
+number of iteration is 5 
+The center is (64, 65), the radius is 5 
+The center is (48, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 21, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (70, 105), the radius is 6 
+The center is (52, 108), the radius is 6 
+The center is (21, 84), the radius is 7 
+The center is (6, 89), the radius is 8 
+The center is None, the radius is 0 
+Episode: 24, Reward: -12, Explore: 2.00 
+number of iteration is 5 
+The center is (64, 65), the radius is 5 
+The center is (66, 72), the radius is 5 
+The center is None, the radius is 0 
+Episode: 27, Reward: -34, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (50, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 30, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 98), the radius is 6 
+The center is None, the radius is 0 
+Episode: 33, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (65, 103), the radius is 6 
+The center is None, the radius is 0 
+Episode: 36, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (68, 79), the radius is 5 
+The center is (80, 72), the radius is 5 
+The center is None, the radius is 0 
+Episode: 39, Reward: -22, Explore: 2.00 
+number of iteration is 3 
+The center is (62, 65), the radius is 5 
+The center is (35, 38), the radius is 6 
+The center is None, the radius is 0 
+Episode: 42, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (66, 94), the radius is 6 
+The center is None, the radius is 0 
+Episode: 45, Reward: -38, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (80, 76), the radius is 5 
+The center is (81, 124), the radius is 6 
+The center is (101, 90), the radius is 6 
+The center is None, the radius is 0 
+Episode: 48, Reward: -18, Explore: 2.00 
+number of iteration is 4 
+The center is (64, 65), the radius is 5 
+The center is (56, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 51, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (70, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 54, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (66, 74), the radius is 5 
+The center is None, the radius is 0 
+Episode: 57, Reward: -35, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (53, 100), the radius is 6 
+The center is (39, 83), the radius is 6 
+The center is (42, 59), the radius is 5 
+The center is (67, 90), the radius is 6 
+The center is None, the radius is 0 
+Episode: 60, Reward: -3, Explore: 2.00 
+number of iteration is 5 
+The center is (64, 65), the radius is 5 
+The center is (68, 29), the radius is 6 
+The center is (124, 55), the radius is 6 
+The center is None, the radius is 0 
+Episode: 63, Reward: -30, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (68, 40), the radius is 5 
+The center is None, the radius is 0 
+Episode: 66, Reward: -37, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (37, 46), the radius is 6 
+The center is (12, 39), the radius is 7 
+The center is (30, 108), the radius is 7 
+The center is (16, 104), the radius is 7 
+The center is (27, 83), the radius is 7 
+The center is None, the radius is 0 
+Episode: 69, Reward: -2, Explore: 2.00 
+number of iteration is 6 
+The center is (50, 65), the radius is 5 
+The center is (27, 70), the radius is 6 
+The center is (22, 126), the radius is 3 
+The center is None, the radius is 0 
+Episode: 72, Reward: -28, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (62, 25), the radius is 6 
+The center is None, the radius is 0 
+Episode: 75, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 99), the radius is 6 
+The center is None, the radius is 0 
+Episode: 78, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (58, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 81, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (62, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 84, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (70, 108), the radius is 6 
+The center is None, the radius is 0 
+Episode: 87, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (72, 71), the radius is 5 
+The center is (78, 53), the radius is 5 
+The center is (62, 35), the radius is 6 
+The center is (83, 118), the radius is 7 
+The center is (64, 121), the radius is 7 
+The center is (52, 93), the radius is 7 
+The center is None, the radius is 0 
+Episode: 90, Reward: 18, Explore: 2.00 
+number of iteration is 7 
+The center is (64, 65), the radius is 5 
+The center is (67, 91), the radius is 6 
+The center is (56, 122), the radius is 6 
+The center is (24, 124), the radius is 6 
+The center is None, the radius is 0 
+Episode: 93, Reward: -21, Explore: 2.00 
+number of iteration is 4 
+The center is (64, 65), the radius is 5 
+The center is (54, 98), the radius is 6 
+The center is (52, 126), the radius is 5 
+The center is None, the radius is 0 
+Episode: 96, Reward: -29, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (51, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 99, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (57, 68), the radius is 5 
+The center is (55, 71), the radius is 5 
+The center is (67, 11), the radius is 6 
+The center is (51, 9), the radius is 6 
+The center is (83, 48), the radius is 5 
+The center is (103, 35), the radius is 6 
+The center is None, the radius is 0 
+Episode: 102, Reward: 20, Explore: 2.00 
+number of iteration is 7 
+The center is (64, 65), the radius is 5 
+The center is (49, 112), the radius is 6 
+The center is None, the radius is 0 
+Episode: 105, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 108, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 73), the radius is 5 
+The center is None, the radius is 0 
+Episode: 111, Reward: -36, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (51, 103), the radius is 6 
+The center is None, the radius is 0 
+Episode: 114, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (72, 104), the radius is 6 
+The center is None, the radius is 0 
+Episode: 117, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (58, 111), the radius is 6 
+The center is (69, 124), the radius is 6 
+The center is (126, 40), the radius is 5 
+The center is None, the radius is 0 
+Episode: 120, Reward: -22, Explore: 2.00 
+number of iteration is 4 
+The center is (64, 65), the radius is 5 
+The center is (62, 21), the radius is 6 
+The center is (107, 1), the radius is 6 
+The center is None, the radius is 0 
+Episode: 123, Reward: -32, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (68, 42), the radius is 5 
+The center is (91, 41), the radius is 6 
+The center is (79, 124), the radius is 6 
+The center is (71, 126), the radius is 3 
+The center is (42, 94), the radius is 6 
+The center is None, the radius is 0 
+Episode: 126, Reward: 5, Explore: 2.00 
+number of iteration is 6 
+The center is (64, 65), the radius is 5 
+The center is (72, 104), the radius is 6 
+The center is (55, 112), the radius is 6 
+The center is (17, 123), the radius is 7 
+The center is None, the radius is 0 
+Episode: 129, Reward: -22, Explore: 2.00 
+number of iteration is 4 
+The center is (64, 65), the radius is 5 
+The center is (68, 32), the radius is 5 
+The center is (85, 50), the radius is 5 
+The center is (76, 70), the radius is 5 
+The center is (33, 31), the radius is 5 
+The center is None, the radius is 0 
+Episode: 132, Reward: -2, Explore: 2.00 
+number of iteration is 5 
+The center is (64, 65), the radius is 5 
+The center is (51, 101), the radius is 6 
+The center is None, the radius is 0 
+Episode: 135, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (58, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 138, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (65, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 141, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (86, 35), the radius is 6 
+The center is None, the radius is 0 
+Episode: 144, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 147, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (61, 28), the radius is 6 
+The center is (73, 37), the radius is 5 
+The center is (100, 77), the radius is 5 
+The center is (88, 33), the radius is 5 
+The center is None, the radius is 0 
+Episode: 150, Reward: -6, Explore: 2.00 
+number of iteration is 5 
+The center is (64, 65), the radius is 5 
+The center is (64, 59), the radius is 5 
+The center is (63, 75), the radius is 5 
+The center is None, the radius is 0 
+Episode: 4, Reward: -18, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (57, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 8, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (63, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 12, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (58, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 16, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (30, 32), the radius is 6 
+The center is None, the radius is 1 
+Episode: 20, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (60, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 24, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (51, 35), the radius is 6 
+The center is None, the radius is 0 
+Episode: 28, Reward: -38, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (68, 108), the radius is 6 
+The center is None, the radius is 0 
+Episode: 32, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (60, 29), the radius is 5 
+The center is (82, 46), the radius is 5 
+The center is None, the radius is 0 
+Episode: 36, Reward: -26, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (76, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 40, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (53, 100), the radius is 6 
+The center is None, the radius is 0 
+Episode: 44, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (37, 44), the radius is 6 
+The center is None, the radius is 0 
+Episode: 48, Reward: -38, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (60, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 52, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (53, 100), the radius is 6 
+The center is None, the radius is 0 
+Episode: 56, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (31, 22), the radius is 6 
+The center is None, the radius is 0 
+Episode: 60, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (65, 72), the radius is 5 
+The center is (91, 116), the radius is 7 
+The center is None, the radius is 0 
+Episode: 64, Reward: -25, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (73, 105), the radius is 6 
+The center is (99, 102), the radius is 7 
+The center is (123, 87), the radius is 6 
+The center is None, the radius is 0 
+Episode: 68, Reward: -22, Explore: 2.00 
+number of iteration is 4 
+The center is (62, 65), the radius is 5 
+The center is (61, 24), the radius is 6 
+The center is (60, 21), the radius is 6 
+The center is (125, 105), the radius is 5 
+The center is None, the radius is 0 
+Episode: 72, Reward: -21, Explore: 2.00 
+number of iteration is 4 
+The center is (64, 65), the radius is 5 
+The center is (30, 27), the radius is 6 
+The center is None, the radius is 0 
+Episode: 76, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (69, 65), the radius is 5 
+The center is (56, 110), the radius is 6 
+The center is (30, 126), the radius is 5 
+The center is (25, 115), the radius is 7 
+The center is None, the radius is 0 
+Episode: 80, Reward: -7, Explore: 2.00 
+number of iteration is 5 
+The center is (64, 65), the radius is 5 
+The center is (50, 68), the radius is 5 
+The center is (29, 65), the radius is 6 
+The center is None, the radius is 0 
+Episode: 84, Reward: -25, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (51, 104), the radius is 6 
+The center is None, the radius is 0 
+Episode: 88, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 109), the radius is 6 
+The center is None, the radius is 0 
+Episode: 92, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (58, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 96, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 100, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (60, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 104, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (66, 26), the radius is 6 
+The center is (123, 47), the radius is 6 
+The center is None, the radius is 0 
+Episode: 108, Reward: -31, Explore: 2.00 
+number of iteration is 3 
+The center is (64, 65), the radius is 5 
+The center is (78, 28), the radius is 6 
+The center is (49, 46), the radius is 5 
+The center is (72, 95), the radius is 5 
+The center is None, the radius is 0 
+Episode: 112, Reward: -14, Explore: 2.00 
+number of iteration is 4 
+The center is (64, 65), the radius is 5 
+The center is (54, 103), the radius is 6 
+The center is None, the radius is 0 
+Episode: 116, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (55, 102), the radius is 6 
+The center is None, the radius is 0 
+Episode: 120, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 111), the radius is 6 
+The center is None, the radius is 0 
+Episode: 124, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (52, 19), the radius is 6 
+The center is None, the radius is 0 
+Episode: 128, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (48, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 132, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (68, 29), the radius is 6 
+The center is None, the radius is 0 
+Episode: 136, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (34, 38), the radius is 6 
+The center is None, the radius is 0 
+Episode: 140, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (30, 27), the radius is 6 
+The center is None, the radius is 0 
+Episode: 144, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (70, 107), the radius is 6 
+The center is None, the radius is 0 
+Episode: 148, Reward: -40, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
+The center is (46, 93), the radius is 6 
+The center is None, the radius is 0 
+Episode: 152, Reward: -39, Explore: 2.00 
+number of iteration is 2 
+The center is (64, 65), the radius is 5 
