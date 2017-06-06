@@ -30,7 +30,7 @@ tf.set_random_seed(1)
 
  ########################SET UP PARAMETERS##################################
 
-MAX_EPISODES = 70
+MAX_EPISODES = 5000
 MAX_EP_STEPS = 400
 LR_A = 0.01  # learning rate for actor
 LR_C = 0.01  # learning rate for critic

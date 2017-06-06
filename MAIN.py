@@ -39,8 +39,8 @@ tf.set_random_seed(1)
 
 MAX_EPISODES = 10000
 #MAX_EP_STEPS = 400
-LR_A = 0.01  # learning rate for actor
-LR_C = 0.01  # learning rate for critic
+LR_A = 0.001  # learning rate for actor
+LR_C = 0.001  # learning rate for critic
 GAMMA = 0.9  # reward discount
 TAU = 0.01  # Soft update for target param, but this is computationally expansive
 # so we use replace_iter instead
@@ -94,7 +94,7 @@ actor.add_grad_to_graph(critic.a_grads)
 sess.run(tf.global_variables_initializer())
 cnt_epi = 0
 # control exploration randomness
-var = 1
+var = 2
 
 #savera = tf.train.import_meta_graph('./actor_checkpoint/actor.meta')
 #saverc = tf.train.import_meta_graph('./critic_checkpoint/critic.meta')
@@ -111,7 +111,7 @@ for i in range(int(MAX_EPISODES/50)):
             # Added exploration noise
             a = actor.choose_action(s)
             a = np.clip(np.random.normal(a, var), -action_bound, action_bound)    # add randomness to action selection for exploration
-            s_, r = pr._step(a)                 # the step (or act) function is predefined in gym (next state and r can be calculated via this)
+            s_, r, center = pr._step(a)                 # the step (or act) function is predefined in gym (next state and r can be calculated via this)
             M.store_transition(s, a, r / 10, s_)
             if M.pointer > MEMORY_CAPACITY:
                 var *= .9995    # decay the action randomness
@@ -131,11 +131,18 @@ for i in range(int(MAX_EPISODES/50)):
             cnt += 1
 
             # ending conditions
+            if center[0] < 0:
+                f.write('Episode: %i, Reward: %i, Explore: %.2f \n' % ((i+1)*(j+1), int(ep_reward), var))
+                f.write('number of iteration is %i \n' % cnt)
+                print(int(ep_reward))
+                break
+            '''
             if pr._check_collision():
                 f.write('Episode: %i, Reward: %i, Explore: %.2f \n' % ((i+1)*(j+1), int(ep_reward), var))
                 f.write('number of iteration is %i \n' % cnt)
                 print(int(ep_reward))
                 break
+            '''
         cnt_epi += 1
         print('episode %i' % cnt_epi)
 

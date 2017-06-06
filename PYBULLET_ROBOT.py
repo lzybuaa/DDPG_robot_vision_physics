@@ -91,6 +91,7 @@ class PybulletRobot:
         self.state_space[16] = 0
         if reset:
             self.init_radius = radius
+        return center
 
     # maps (-1, 0) to (-500, -200), (0, 1) to (200, 500)
     def _map_action(self, action):
@@ -119,7 +120,7 @@ class PybulletRobot:
         print('ball back to the original position')
         # take the picture before ball moves
         self._update_state(True)  # true = update the init_radius
-        p.setGravity(0,0,-0.01)
+        p.setGravity(0,0,-9.8)
         time.sleep(0.5)
         return self.state_space
 
@@ -140,10 +141,10 @@ class PybulletRobot:
                 p.stepSimulation()
             time.sleep(0.001)  # naive computation
         # update the state
-        self._update_state()
+        center = self._update_state()
         # compute the reward
         r = compute_reward(self.state_space[0:2], self.state_space[2], XSIZE, YSIZE, self.init_radius)
-        return (self.state_space, r) # s_ and reward
+        return (self.state_space, r, center) # s_ and reward
 
 
     # perform taking pictures
