@@ -2,6 +2,7 @@
 import numpy as np
 import cv2
 import sys
+from PIL import Image
 
 PY3 = sys.version_info[0] == 3
 if PY3:
@@ -74,7 +75,7 @@ def compute_reward(center, radius, XSIZE, YSIZE, initial_radius):
     """
     img_center = np.array([XSIZE, YSIZE])/2
 
-    if round(radius) is 0 or center[0] < 0 :
+    if round(radius,2) is 0 or center[0] < 0 :
         return NEGATIVE_REWARD
 
     # super simple reward function = radius - weight * (abs(xdiff) + abs(ydiff))
@@ -85,3 +86,4 @@ def compute_reward(center, radius, XSIZE, YSIZE, initial_radius):
     reward = 1/x
 
     return reward
+

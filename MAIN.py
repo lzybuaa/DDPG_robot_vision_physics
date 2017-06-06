@@ -39,14 +39,14 @@ tf.set_random_seed(1)
 
 MAX_EPISODES = 10000
 #MAX_EP_STEPS = 400
-LR_A = 0.001  # learning rate for actor
-LR_C = 0.001  # learning rate for critic
+LR_A = 0.01  # learning rate for actor
+LR_C = 0.01  # learning rate for critic
 GAMMA = 0.9  # reward discount
 TAU = 0.01  # Soft update for target param, but this is computationally expansive
 # so we use replace_iter instead
 REPLACE_ITER_A = 500 
 REPLACE_ITER_C = 300
-MEMORY_CAPACITY = 1000
+MEMORY_CAPACITY = 2000
 BATCH_SIZE = 20
 #######################INITIALIZE PYBULLET INSTANCE#########################
 
@@ -130,11 +130,12 @@ for i in range(int(MAX_EPISODES/50)):
             ep_reward += r  # aggregate the episode reward
             cnt += 1
 
+            
             # ending conditions
             if center[0] < 0:
                 f.write('Episode: %i, Reward: %i, Explore: %.2f \n' % ((i+1)*(j+1), int(ep_reward), var))
                 f.write('number of iteration is %i \n' % cnt)
-                print(int(ep_reward))
+                print('number of iteration is %i, reward is: %d' %(cnt, int(ep_reward)))
                 break
             '''
             if pr._check_collision():
@@ -143,13 +144,14 @@ for i in range(int(MAX_EPISODES/50)):
                 print(int(ep_reward))
                 break
             '''
+
         cnt_epi += 1
         print('episode %i' % cnt_epi)
 
-    #savera = tf.train.Saver() # save every vector
-    #saverc = tf.train.Saver() # save every vector
-    #savera.save(actor.sess, "./actor_checkpoint/actor")
-    #saverc.save(critic.sess, "./critic_checkpoint/critic")
+    savera = tf.train.Saver() # save every vector
+    saverc = tf.train.Saver() # save every vector
+    savera.save(actor.sess, "./actor_checkpoint/actor")
+    saverc.save(critic.sess, "./critic_checkpoint/critic")
         
 
 
